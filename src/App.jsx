@@ -1,4 +1,3 @@
-
 import MainLayout from "./layout/MainLayout.jsx";
 import Home from "./pages/Home.jsx";
 import { Route, Routes } from "react-router-dom";
