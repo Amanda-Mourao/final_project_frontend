@@ -915,3 +915,22 @@ body {
     transform: translateY(0) scale(1);
   }
 }
+
+/* Ravenclaw Animate wave effect   */
+@keyframes wave {
+  0%,
+  100% {
+    transform: scaleY(-1) translateX(0) translateY(0);
+    filter: drop-shadow(0 0 2px rgba(59, 130, 246, 0.6));
+  }
+  25% {
+    transform: scaleY(-1) translateX(3px) translateY(-3px) rotate(-1deg);
+  }
+  50% {
+    transform: scaleY(-1) translateX(-3px) translateY(3px) rotate(1deg);
+    filter: drop-shadow(0 0 5px rgba(59, 130, 246, 1));
+  }
+  75% {
+    transform: scaleY(-1) translateX(3px) translateY(-3px) rotate(-1deg);
+  }
+}
