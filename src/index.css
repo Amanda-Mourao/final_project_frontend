@@ -1,202 +1,42 @@
 @import "tailwindcss";
 
+/* Allgemeine EInstellung */
 :root {
   --color-primary: black;
-  --color-accent: #EC9A53;
-  --color-orangehell: #ec9a5366;
+  --color-accent: #ffb677;
+  --color-b-shadow: #00ffff;
   --color-text: #b48534;
-  --color-hover: #ec9a53cc;
-  --color-b-shadow: #00FFFF;
   --color-b: rgba(0, 0, 0, 0.531);
+  --color-attention: #facd6c;
 }
-
 body {
   color: var(--color-text);
   background-color: var(--color-primary);
 }
-
 a:hover {
   color: var(--color-hover);
 }
-
-/* --- loading spinner --- */
-@keyframes spin-slow {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
+html,
+body {
+  height: 100%;
+  overflow: hidden;
 }
+/* ------------------ */
 
-.spin-slow {
-  animation: spin-slow 4s linear infinite;
+/* Text Shadow Effekt */
+.text-shadow-black {
+  text-shadow: 2px 2px 2px black;
 }
-
-.filter-gold {
-  filter: sepia(0.8) saturate(4) brightness(1.4) contrast(1.1);
+.text-shadow-sm {
+  text-shadow: 1px 1px 2px black;
 }
-
-/* --- loading spinner --- */
-
-
-/* --- WELCOME TO...UNLOCK YOUR DESTINY Text-Animation --- */
-.magic-text span {
-  display: inline-block;
-  opacity: 1;
-  animation: magicFade 0.8s ease-out forwards;
+.text-shadow-lg {
+  text-shadow: 3px 3px 6px black;
 }
-
-.magic-text .delay-1 {
-  animation-delay: 0.2s;
+.text-shadow-white {
+  text-shadow: 0px 2px 3px white;
 }
-
-.magic-text .delay-2 {
-  animation-delay: 0.4s;
-}
-
-.magic-text .delay-3 {
-  animation-delay: 0.6s;
-}
-
-.magic-text .delay-4 {
-  animation-delay: 0.8s;
-}
-
-.magic-text .delay-5 {
-  animation-delay: 1s;
-}
-
-.magic-text .delay-6 {
-  animation-delay: 1.2s;
-}
-
-.magic-text .delay-7 {
-  animation-delay: 1.4s;
-}
-
-.magic-text .delay-8 {
-  animation-delay: 2.2s;
-}
-
-.magic-text .delay-9 {
-  animation-delay: 2.4s;
-}
-
-/* --- Logo Animation --- */
-.logo-fade {
-  opacity: 0;
-  animation: popIn 0.6s forwards, magicFade 0.8s ease-out forwards;
-  animation-delay: 3.3s, 6.5s;
-}
-
-/* --- Unlock Your Destiny Animation --- */
-.unlock-text {
-  opacity: 0;
-  animation: showText 0.1s forwards;
-  animation-delay: 7.5s;
-}
-
-/* Danach kommen die Buchstaben-Animationen */
-.unlock-text span {
-  display: inline-block;
-  opacity: 1;
-  animation: magicFade 0.8s ease-out forwards;
-}
-
-/* Delay je Buchstabe */
-.unlock-text .ud-delay-1 {
-  animation-delay: 8.5s;
-}
-
-.unlock-text .ud-delay-2 {
-  animation-delay: 8.7s;
-}
-
-.unlock-text .ud-delay-3 {
-  animation-delay: 8.9s;
-}
-
-.unlock-text .ud-delay-4 {
-  animation-delay: 9.1s;
-}
-
-.unlock-text .ud-delay-5 {
-  animation-delay: 9.3s;
-}
-
-.unlock-text .ud-delay-6 {
-  animation-delay: 9.5s;
-}
-
-.unlock-text .ud-delay-7 {
-  animation-delay: 9.7s;
-}
-
-.unlock-text .ud-delay-8 {
-  animation-delay: 9.9s;
-}
-
-.unlock-text .ud-delay-9 {
-  animation-delay: 10.1s;
-}
-
-.unlock-text .ud-delay-10 {
-  animation-delay: 10.3s;
-}
-
-.unlock-text .ud-delay-11 {
-  animation-delay: 10.5s;
-}
-
-.unlock-text .ud-delay-12 {
-  animation-delay: 10.7s;
-}
-
-.unlock-text .ud-delay-13 {
-  animation-delay: 10.9s;
-}
-
-.unlock-text .ud-delay-14 {
-  animation-delay: 11.1s;
-}
-
-.unlock-text .ud-delay-15 {
-  animation-delay: 11.3s;
-}
-
-.unlock-text .ud-delay-16 {
-  animation-delay: 11.5s;
-}
-
-.unlock-text .ud-delay-17 {
-  animation-delay: 11.7s;
-}
-
-/* Sofort sichtbar machen */
-@keyframes showText {
-  to {
-    opacity: 1;
-  }
-}
-
-/* --- Animation --- */
-@keyframes magicFade {
-  0% {
-    opacity: 1;
-    filter: blur(0);
-    transform: translateY(0) scale(1);
-  }
-
-  100% {
-    opacity: 0;
-    filter: blur(4px);
-    transform: translateY(-20px) scale(1.2);
-  }
-}
-
-/* --- WELCOME TO...UNLOCK YOUR DESTINY Text-Animation --- */
+/* ------------------ */
 
 /* --- Logo PopUp --- */
 @keyframes popIn {
@@ -204,25 +44,874 @@ a:hover {
     opacity: 0;
     transform: scale(0.8);
   }
-
   to {
     opacity: 1;
     transform: scale(1);
   }
 }
+.logo-fade {
+  opacity: 0;
+  animation: popIn 0.9s forwards, magicFade 2s ease-out forwards;
+  animation-delay: 3.3s, 11.4s;
+}
+/* --- ----- --- */
+
+/* Overlay-Home */
+.fade-bg {
+  background: #000;
+  transition: opacity 6000ms cubic-bezier(0.6, 0, 0.9, 0);
+  z-index: 30;
+  pointer-events: none;
+}
+.fade-bg.visible {
+  opacity: 1;
+}
+.fade-bg.invisible {
+  opacity: 0;
+}
+/* --- ----- --- */
 
 /* --- Bg Zoom --- */
-@keyframes zoomInBackground {
+@keyframes zoomInBg {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.4);
+  }
+}
+.zoom-in-bg {
+  animation: zoomInBg 14s ease-in-out forwards;
+}
+
+@keyframes zoom-slow {
   0% {
     transform: scale(1);
   }
 
   100% {
-    transform: scale(1.3);
+    transform: scale(1.2);
   }
 }
 
-.zoom-in-bg {
-  animation: zoomInBackground 14s ease-in-out forwards;
+/* Marauder's Map Footsteps Effect */
+#ui {
+  /* position, top, left etc. are set inline for React, only visual here */
+  pointer-events: none;
+  user-select: none;
+}
+#ui p.footsteps-text {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  overflow: hidden;
+  font-size: 18px;
+  white-space: nowrap;
+  transform: translate(-50%, -50%);
+  font-family: "IM Fell English", "Lucida Handwriting", cursive;
+  color: #333;
+  z-index: 50;
+  filter: drop-shadow(0 2px 2px #fff2);
+}
+#ui .track {
+  position: absolute;
+  left: 50px;
+  width: 50px;
+  height: 8px;
+  border-radius: 999px;
+  transform-origin: 0 50%;
+  transition: 2000ms;
+  background: rgba(0, 0, 0, 0.1);
+}
+#ui .track .foot {
+  position: absolute;
+  width: 14px;
+  height: 9px;
+  background: #000;
+  border-radius: 50%;
+  opacity: 0;
+}
+#ui .track .foot_claw {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 8px;
+  background: #000;
+  border-radius: 100px 0px;
+}
+#ui .track .foot_claw:nth-child(2) {
+  top: 0px;
+  left: -9px;
+}
+#ui .track .foot.left {
+  top: -7px;
+}
+#ui .track .foot.right {
+  top: 7px;
+  left: 25px;
+}
+#ui.switch .track {
+  background: rgba(0, 0, 0, 0);
+}
+#ui.switch p.footsteps-text::after {
+  opacity: 0;
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0;
+  }
+}
+#ui .track.track_1 {
+  transform: rotateZ(-2deg);
+}
+#ui .track.track_1 .foot.left {
+  animation: fadeOut 3000ms infinite linear 300ms;
+}
+#ui .track.track_1 .foot.right {
+  animation: fadeOut 3000ms infinite linear 450ms;
+}
+#ui .track.track_2 {
+  transform: rotateZ(100deg);
+}
+#ui .track.track_2 .foot.left {
+  animation: fadeOut 3000ms infinite linear 600ms;
+}
+#ui .track.track_2 .foot.right {
+  animation: fadeOut 3000ms infinite linear 750ms;
+}
+#ui .track.track_3 {
+  transform: rotateZ(41deg);
+}
+#ui .track.track_3 .foot.left {
+  animation: fadeOut 3000ms infinite linear 900ms;
+}
+#ui .track.track_3 .foot.right {
+  animation: fadeOut 3000ms infinite linear 1050ms;
+}
+#ui .track.track_4 {
+  transform: rotateZ(53deg);
+}
+#ui .track.track_4 .foot.left {
+  animation: fadeOut 3000ms infinite linear 1200ms;
+}
+#ui .track.track_4 .foot.right {
+  animation: fadeOut 3000ms infinite linear 1350ms;
+}
+#ui .track.track_5 {
+  transform: rotateZ(-15deg);
+}
+#ui .track.track_5 .foot.left {
+  animation: fadeOut 3000ms infinite linear 1500ms;
+}
+#ui .track.track_5 .foot.right {
+  animation: fadeOut 3000ms infinite linear 1650ms;
+}
+#ui .track.track_6 {
+  transform: rotateZ(69deg);
+}
+#ui .track.track_6 .foot.left {
+  animation: fadeOut 3000ms infinite linear 1800ms;
+}
+#ui .track.track_6 .foot.right {
+  animation: fadeOut 3000ms infinite linear 1950ms;
+}
+#ui .track.track_7 {
+  transform: rotateZ(-9deg);
+}
+#ui .track.track_7 .foot.left {
+  animation: fadeOut 3000ms infinite linear 2100ms;
+}
+#ui .track.track_7 .foot.right {
+  animation: fadeOut 3000ms infinite linear 2250ms;
+}
+#ui .track.track_8 {
+  transform: rotateZ(28deg);
+}
+#ui .track.track_8 .foot.left {
+  animation: fadeOut 3000ms infinite linear 2400ms;
+}
+#ui .track.track_8 .foot.right {
+  animation: fadeOut 3000ms infinite linear 2550ms;
+}
+#ui .track.track_9 {
+  transform: rotateZ(-12deg);
+}
+#ui .track.track_9 .foot.left {
+  animation: fadeOut 3000ms infinite linear 2700ms;
+}
+#ui .track.track_9 .foot.right {
+  animation: fadeOut 3000ms infinite linear 2850ms;
+}
+#ui .track.track_10 {
+  transform: rotateZ(18deg);
+}
+#ui .track.track_10 .foot.left {
+  animation: fadeOut 3000ms infinite linear 3000ms;
+}
+#ui .track.track_10 .foot.right {
+  animation: fadeOut 3000ms infinite linear 3150ms;
+}
+#ui .track.track_11 {
+  transform: rotateZ(70deg);
+}
+#ui .track.track_11 .foot.left {
+  animation: fadeOut 3000ms infinite linear 3300ms;
+}
+#ui .track.track_11 .foot.right {
+  animation: fadeOut 3000ms infinite linear 3450ms;
+}
+#ui .track.track_12 {
+  transform: rotateZ(40deg);
+}
+#ui .track.track_12 .foot.left {
+  animation: fadeOut 3000ms infinite linear 3600ms;
+}
+#ui .track.track_12 .foot.right {
+  animation: fadeOut 3000ms infinite linear 3750ms;
+}
+#ui .track.track_13 {
+  transform: rotateZ(21deg);
+}
+#ui .track.track_13 .foot.left {
+  animation: fadeOut 3000ms infinite linear 3900ms;
+}
+#ui .track.track_13 .foot.right {
+  animation: fadeOut 3000ms infinite linear 4050ms;
+}
+#ui .track.track_14 {
+  transform: rotateZ(-75deg);
+}
+#ui .track.track_14 .foot.left {
+  animation: fadeOut 3000ms infinite linear 4200ms;
+}
+#ui .track.track_14 .foot.right {
+  animation: fadeOut 3000ms infinite linear 4350ms;
+}
+#ui .track.track_15 {
+  transform: rotateZ(65deg);
+}
+#ui .track.track_15 .foot.left {
+  animation: fadeOut 3000ms infinite linear 4500ms;
+}
+#ui .track.track_15 .foot.right {
+  animation: fadeOut 3000ms infinite linear 4650ms;
+}
+#ui .track.track_16 {
+  transform: rotateZ(-41deg);
+}
+#ui .track.track_16 .foot.left {
+  animation: fadeOut 3000ms infinite linear 4800ms;
+}
+#ui .track.track_16 .foot.right {
+  animation: fadeOut 3000ms infinite linear 4950ms;
+}
+#ui .track.track_17 {
+  transform: rotateZ(-56deg);
+}
+#ui .track.track_17 .foot.left {
+  animation: fadeOut 3000ms infinite linear 5100ms;
+}
+#ui .track.track_17 .foot.right {
+  animation: fadeOut 3000ms infinite linear 5250ms;
+}
+#ui .track.track_18 {
+  transform: rotateZ(25deg);
+}
+#ui .track.track_18 .foot.left {
+  animation: fadeOut 3000ms infinite linear 5400ms;
+}
+#ui .track.track_18 .foot.right {
+  animation: fadeOut 3000ms infinite linear 5550ms;
+}
+#ui .track.track_19 {
+  transform: rotateZ(16deg);
+}
+#ui .track.track_19 .foot.left {
+  animation: fadeOut 3000ms infinite linear 5700ms;
+}
+#ui .track.track_19 .foot.right {
+  animation: fadeOut 3000ms infinite linear 5850ms;
+}
+#ui .track.track_20 {
+  transform: rotateZ(75deg);
+}
+#ui .track.track_20 .foot.left {
+  animation: fadeOut 3000ms infinite linear 6000ms;
+}
+#ui .track.track_20 .foot.right {
+  animation: fadeOut 3000ms infinite linear 6150ms;
+}
+#ui .track.track_21 {
+  transform: rotateZ(-6deg);
+}
+#ui .track.track_21 .foot.left {
+  animation: fadeOut 3000ms infinite linear 6300ms;
+}
+#ui .track.track_21 .foot.right {
+  animation: fadeOut 3000ms infinite linear 6450ms;
+}
+#ui .track.track_22 {
+  transform: rotateZ(23deg);
+}
+#ui .track.track_22 .foot.left {
+  animation: fadeOut 3000ms infinite linear 6600ms;
+}
+#ui .track.track_22 .foot.right {
+  animation: fadeOut 3000ms infinite linear 6750ms;
+}
+#ui .track.track_23 {
+  transform: rotateZ(-28deg);
+}
+#ui .track.track_23 .foot.left {
+  animation: fadeOut 3000ms infinite linear 6900ms;
+}
+#ui .track.track_23 .foot.right {
+  animation: fadeOut 3000ms infinite linear 7050ms;
+}
+#ui .track.track_24 {
+  transform: rotateZ(79deg);
+}
+#ui .track.track_24 .foot.left {
+  animation: fadeOut 3000ms infinite linear 7200ms;
+}
+#ui .track.track_24 .foot.right {
+  animation: fadeOut 3000ms infinite linear 7350ms;
+}
+#ui .track.track_25 {
+  transform: rotateZ(57deg);
+}
+#ui .track.track_25 .foot.left {
+  animation: fadeOut 3000ms infinite linear 7500ms;
+}
+#ui .track.track_25 .foot.right {
+  animation: fadeOut 3000ms infinite linear 7650ms;
+}
+#ui .track.track_26 {
+  transform: rotateZ(-66deg);
+}
+#ui .track.track_26 .foot.left {
+  animation: fadeOut 3000ms infinite linear 7800ms;
+}
+#ui .track.track_26 .foot.right {
+  animation: fadeOut 3000ms infinite linear 7950ms;
+}
+#ui .track.track_27 {
+  transform: rotateZ(83deg);
+}
+#ui .track.track_27 .foot.left {
+  animation: fadeOut 3000ms infinite linear 8100ms;
+}
+#ui .track.track_27 .foot.right {
+  animation: fadeOut 3000ms infinite linear 8250ms;
+}
+#ui .track.track_28 {
+  transform: rotateZ(40deg);
+}
+#ui .track.track_28 .foot.left {
+  animation: fadeOut 3000ms infinite linear 8400ms;
+}
+#ui .track.track_28 .foot.right {
+  animation: fadeOut 3000ms infinite linear 8550ms;
+}
+#ui .track.track_29 {
+  transform: rotateZ(24deg);
+}
+#ui .track.track_29 .foot.left {
+  animation: fadeOut 3000ms infinite linear 8700ms;
+}
+#ui .track.track_29 .foot.right {
+  animation: fadeOut 3000ms infinite linear 8850ms;
+}
+#ui .track.track_30 {
+  transform: rotateZ(4deg);
+}
+#ui .track.track_30 .foot.left {
+  animation: fadeOut 3000ms infinite linear 9000ms;
+}
+#ui .track.track_30 .foot.right {
+  animation: fadeOut 3000ms infinite linear 9150ms;
+}
+#ui .track.track_31 {
+  transform: rotateZ(39deg);
+}
+#ui .track.track_31 .foot.left {
+  animation: fadeOut 3000ms infinite linear 9300ms;
+}
+#ui .track.track_31 .foot.right {
+  animation: fadeOut 3000ms infinite linear 9450ms;
+}
+#ui .track.track_32 {
+  transform: rotateZ(85deg);
+}
+#ui .track.track_32 .foot.left {
+  animation: fadeOut 3000ms infinite linear 9600ms;
+}
+#ui .track.track_32 .foot.right {
+  animation: fadeOut 3000ms infinite linear 9750ms;
+}
+#ui .track.track_33 {
+  transform: rotateZ(-24deg);
+}
+#ui .track.track_33 .foot.left {
+  animation: fadeOut 3000ms infinite linear 9900ms;
+}
+#ui .track.track_33 .foot.right {
+  animation: fadeOut 3000ms infinite linear 10050ms;
+}
+#ui .track.track_34 {
+  transform: rotateZ(22deg);
+}
+#ui .track.track_34 .foot.left {
+  animation: fadeOut 3000ms infinite linear 10200ms;
+}
+#ui .track.track_34 .foot.right {
+  animation: fadeOut 3000ms infinite linear 10350ms;
+}
+#ui .track.track_35 {
+  transform: rotateZ(-84deg);
+}
+#ui .track.track_35 .foot.left {
+  animation: fadeOut 3000ms infinite linear 10500ms;
+}
+#ui .track.track_35 .foot.right {
+  animation: fadeOut 3000ms infinite linear 10650ms;
+}
+#ui .track.track_36 {
+  transform: rotateZ(82deg);
+}
+#ui .track.track_36 .foot.left {
+  animation: fadeOut 3000ms infinite linear 10800ms;
+}
+#ui .track.track_36 .foot.right {
+  animation: fadeOut 3000ms infinite linear 10950ms;
+}
+#ui .track.track_37 {
+  transform: rotateZ(-48deg);
+}
+#ui .track.track_37 .foot.left {
+  animation: fadeOut 3000ms infinite linear 11100ms;
+}
+#ui .track.track_37 .foot.right {
+  animation: fadeOut 3000ms infinite linear 11250ms;
+}
+#ui .track.track_38 {
+  transform: rotateZ(37deg);
+}
+#ui .track.track_38 .foot.left {
+  animation: fadeOut 3000ms infinite linear 11400ms;
+}
+#ui .track.track_38 .foot.right {
+  animation: fadeOut 3000ms infinite linear 11550ms;
+}
+#ui .track.track_39 {
+  transform: rotateZ(77deg);
+}
+#ui .track.track_39 .foot.left {
+  animation: fadeOut 3000ms infinite linear 11700ms;
+}
+#ui .track.track_39 .foot.right {
+  animation: fadeOut 3000ms infinite linear 11850ms;
+}
+#ui .track.track_40 {
+  transform: rotateZ(84deg);
+}
+#ui .track.track_40 .foot.left {
+  animation: fadeOut 3000ms infinite linear 12000ms;
+}
+#ui .track.track_40 .foot.right {
+  animation: fadeOut 3000ms infinite linear 12150ms;
+}
+#ui .track.track_41 {
+  transform: rotateZ(-31deg);
+}
+#ui .track.track_41 .foot.left {
+  animation: fadeOut 3000ms infinite linear 12300ms;
+}
+#ui .track.track_41 .foot.right {
+  animation: fadeOut 3000ms infinite linear 12450ms;
+}
+#ui .track.track_42 {
+  transform: rotateZ(-37deg);
+}
+#ui .track.track_42 .foot.left {
+  animation: fadeOut 3000ms infinite linear 12600ms;
+}
+#ui .track.track_42 .foot.right {
+  animation: fadeOut 3000ms infinite linear 12750ms;
+}
+#ui .track.track_43 {
+  transform: rotateZ(80deg);
+}
+#ui .track.track_43 .foot.left {
+  animation: fadeOut 3000ms infinite linear 12900ms;
+}
+#ui .track.track_43 .foot.right {
+  animation: fadeOut 3000ms infinite linear 13050ms;
+}
+#ui .track.track_44 {
+  transform: rotateZ(-58deg);
+}
+#ui .track.track_44 .foot.left {
+  animation: fadeOut 3000ms infinite linear 13200ms;
+}
+#ui .track.track_44 .foot.right {
+  animation: fadeOut 3000ms infinite linear 13350ms;
+}
+#ui .track.track_45 {
+  transform: rotateZ(22deg);
+}
+#ui .track.track_45 .foot.left {
+  animation: fadeOut 3000ms infinite linear 13500ms;
+}
+#ui .track.track_45 .foot.right {
+  animation: fadeOut 3000ms infinite linear 13650ms;
+}
+#ui .track.track_46 {
+  transform: rotateZ(-48deg);
+}
+#ui .track.track_46 .foot.left {
+  animation: fadeOut 3000ms infinite linear 13800ms;
+}
+#ui .track.track_46 .foot.right {
+  animation: fadeOut 3000ms infinite linear 13950ms;
+}
+#ui .track.track_47 {
+  transform: rotateZ(-31deg);
+}
+
+#ui .track.track_47 .foot.left {
+  animation: fadeOut 3000ms infinite linear 14100ms;
+}
+#ui .track.track_47 .foot.right {
+  animation: fadeOut 3000ms infinite linear 14250ms;
+}
+#ui .track.track_48 {
+  transform: rotateZ(89deg);
+}
+#ui .track.track_48 .foot.left {
+  animation: fadeOut 3000ms infinite linear 14400ms;
+}
+#ui .track.track_48 .foot.right {
+  animation: fadeOut 3000ms infinite linear 14550ms;
+}
+#ui .track.track_49 {
+  transform: rotateZ(12deg);
+}
+#ui .track.track_49 .foot.left {
+  animation: fadeOut 3000ms infinite linear 14700ms;
+}
+#ui .track.track_49 .foot.right {
+  animation: fadeOut 3000ms infinite linear 14850ms;
+}
+#ui .track.track_50 {
+  transform: rotateZ(89deg);
+}
+#ui .track.track_50 .foot.left {
+  animation: fadeOut 3000ms infinite linear 15000ms;
+}
+#ui .track.track_50 .foot.right {
+  animation: fadeOut 3000ms infinite linear 15150ms;
+}
+
+.house-size {
+  width: 150px;
+  height: 150px;
+}
+.house-size-hover {
+  width: 160px;
+  height: 160px;
+}
+
+.house-scale {
+  transform: scale(1);
+  transition: opacity 0.4s, transform 0.38s;
+}
+.house-scale-hover {
+  transform: scale(1.15);
+  transition: opacity 0.4s, transform 0.38s;
+}
+
+@keyframes zoom-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.16);
+  }
+}
+.zooming-wappe {
+  animation: zoom-pulse 1.2s ease-in-out infinite;
+}
+---------------
+
+/* FAde zu anderen seiten Übergang */
+.animate-fade-in {
+  animation: fade-in-bubble 0.45s ease;
+}
+@keyframes fade-in-bubble {
+  from {
+    opacity: 0;
+    transform: translateY(25px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+/* ------------------ */
+
+/* SlytherinSeite-Potions-Hover */
+.magic-glow-hover::before {
+  content: "";
+  position: absolute;
+  inset: -18%;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 330ms cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+}
+.group:hover .magic-glow-hover::before {
+  opacity: 1;
+}
+.magic-glow-hover::before {
+  background: radial-gradient(
+    ellipse 150% 100% at 50% 56%,
+    #b485345a 0%,
+    #a0762f5d 70%,
+    transparent 100%
+  );
+  filter: blur(36px) brightness(1.7) saturate(1.5);
+}
+/* ------------------ */
+
+/*Result-Zaubertank-Animation-Potion */
+@keyframes smokeUp1 {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) scale(0.96) rotate(-2deg);
+  }
+  10% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.6;
+  }
+  25% {
+    opacity: 0.8;
+    transform: translateY(5px) scale(1.03) rotate(2deg);
+  }
+  55% {
+    opacity: 0.7;
+    transform: translateY(-35px) scale(1.09) rotate(-3deg);
+  }
+  75% {
+    opacity: 0.2;
+    transform: translateY(-75px) scale(1.13) rotate(3deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-110px) scale(1.18) rotate(-3deg);
+  }
+}
+
+@keyframes smokeUp2 {
+  0% {
+    opacity: 0;
+    transform: translateY(42px) scale(0.94) rotate(3deg);
+  }
+  14% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.5;
+  }
+  40% {
+    opacity: 0.75;
+    transform: translateY(0px) scale(1.05) rotate(-3deg);
+  }
+  65% {
+    opacity: 0.4;
+    transform: translateY(-60px) scale(1.12) rotate(1deg);
+  }
+  85% {
+    opacity: 0.13;
+    transform: translateY(-100px) scale(1.16) rotate(-2deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-135px) scale(1.22) rotate(2deg);
+  }
+}
+
+@keyframes smokeUp3 {
+  0% {
+    opacity: 0;
+    transform: translateY(60px) scale(1) rotate(5deg);
+  }
+  11% {
+    opacity: 0;
+  }
+  17% {
+    opacity: 0.55;
+  }
+  35% {
+    opacity: 0.7;
+    transform: translateY(-10px) scale(1.07) rotate(-2deg);
+  }
+  60% {
+    opacity: 0.5;
+    transform: translateY(-55px) scale(1.13) rotate(3deg);
+  }
+  85% {
+    opacity: 0.08;
+    transform: translateY(-110px) scale(1.21) rotate(-2deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-155px) scale(1.25) rotate(1deg);
+  }
+}
+
+@keyframes smokeUp4 {
+  0% {
+    opacity: 0;
+    transform: translateY(45px) scale(0.93) rotate(-7deg);
+  }
+  13% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.45;
+  }
+  48% {
+    opacity: 0.6;
+    transform: translateY(-15px) scale(1.06) rotate(3deg);
+  }
+  77% {
+    opacity: 0.2;
+    transform: translateY(-65px) scale(1.17) rotate(-2deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-120px) scale(1.21) rotate(-1deg);
+  }
+}
+.animate-smoke1 {
+  animation: smokeUp1 6s linear infinite;
   animation-delay: 0s;
+}
+
+.animate-smoke2 {
+  animation: smokeUp2 5s linear infinite;
+  animation-delay: 0s;
+}
+
+.animate-smoke3 {
+  animation: smokeUp3 5s linear infinite;
+  animation-delay: 0s;
+}
+
+.animate-smoke4 {
+  animation: smokeUp4 6s linear infinite;
+  animation-delay: 0s;
+}
+.cauldron-z {
+  z-index: 0;
+  position: relative;
+}
+.smoke-z {
+  z-index: 1;
+  pointer-events: none;
+  position: absolute;
+  left: 50%;
+  top: 70px;
+  width: 260px;
+  height: 180px;
+  transform: translateX(-50%);
+}
+/* ------------------ */
+
+/* Allgames-Slytherin */
+.blink-cursor {
+  display: inline-block;
+  width: 1ch;
+  animation: blink 1s steps(1) infinite;
+}
+@keyframes blink {
+  0%,
+  60% {
+    opacity: 1;
+  }
+  61%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Hatfinal-animation */
+.magic-text span {
+  display: inline-block;
+  opacity: 0;
+  filter: blur(6px);
+  transform: translateY(16px) scale(0.92);
+  animation: magicFadeIn 0.7s ease-out forwards;
+}
+
+.magic-text .delay-1 {
+  animation-delay: 0.1s;
+}
+.magic-text .delay-2 {
+  animation-delay: 0.22s;
+}
+.magic-text .delay-3 {
+  animation-delay: 0.34s;
+}
+.magic-text .delay-4 {
+  animation-delay: 0.46s;
+}
+.magic-text .delay-5 {
+  animation-delay: 0.58s;
+}
+.magic-text .delay-6 {
+  animation-delay: 0.7s;
+}
+.magic-text .delay-7 {
+  animation-delay: 0.82s;
+}
+.magic-text .delay-8 {
+  animation-delay: 0.94s;
+}
+.magic-text .delay-9 {
+  animation-delay: 1.06s;
+}
+.magic-text .delay-10 {
+  animation-delay: 1.18s;
+}
+.magic-text .delay-11 {
+  animation-delay: 1.3s;
+}
+.magic-text .delay-12 {
+  animation-delay: 1.42s;
+}
+
+@keyframes magicFadeIn {
+  0% {
+    opacity: 0;
+    filter: blur(6px);
+    transform: translateY(16px) scale(0.92);
+  }
+  60% {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateY(-4px) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateY(0) scale(1);
+  }
 }
