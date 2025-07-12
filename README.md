@@ -1,12 +1,16 @@
-# React + Vite
+<!-- Important Disclaimer -->
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a fan-made work and is not affiliated with, endorsed by, or associated with J.K. Rowling, Warner Bros., or any official Harry Potter entities.
+All characters, names, and related indicia are trademarks of their respective owners.
+This project is for educational and non-commercial purposes only.
+All rights to Harry Potter and related works remain with their original copyright holders.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Copyright & Usage Warning
 
-## Expanding the ESLint configuration
+© 2025 Parween Ahmad & Amanda Nicolau Mourao. All rights reserved.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**Unauthorized copying, usage, distribution, or publishing of this code – in whole or in part – is strictly prohibited. Any violation may result in legal consequences.**
+
+If you wish to use any part of this project, please contact the owners for written permission.
