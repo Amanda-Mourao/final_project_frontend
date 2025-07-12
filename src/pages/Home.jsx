@@ -1,6 +1,6 @@
 import React from "react";
 const startscreen =
-  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751011834/Harry_Potter_Night_GIF_db9pkt.gif";
+  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751117836/castle-start_pqirth.png";
 const logo =
   "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751025899/GameLogo_ggxid9.png";
 
@@ -63,10 +63,23 @@ function Home() {
         </div>
       </div>
       {/* BACKGROUND */}
+      {/* <div className="fixed inset-0 z-[-10]">
+        // <img
+        //   src={startscreen}
+        //   alt="Startscreen Background"
+        //   className="object-cover fixed top-0 left-0 right-0 w-screen h-screen mx-auto max-w-[70%]" // zentriert und begrenzt
+        // />
+        // {/* Linker schwarzer Verlauf */}
+      {/* // <div className="absolute top-0 left-0 w-1/4 h-full bg-gradient-to-r from-black to-transparent pointer-events-none" /> */}
+      {/* Rechter schwarzer Verlauf */}
+      {/* // <div className="absolute top-0 right-0 w-1/4 h-full bg-gradient-to-l from-black to-transparent pointer-events-none" /> */}
+      {/* </div>  */}
+      
       <img
         src={startscreen}
         alt="Startscreen Background"
-        className="fixed top-0 left-0 w-screen h-screen object-cover brightness-80 blur-xs grayscale-[0.5] -z-10 zoom-in-bg"
+        className="object-cover fixed top-0 left-0 w-screen h-screen -z-10 zoom-in-pg"
+        // className="fixed top-0 left-0 w-screen h-screen object-cover brightness-80 blur-xs grayscale-[0.5] -z-10 zoom-in-bg"
       />
     </div>
   );
