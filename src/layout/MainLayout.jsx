@@ -1,7 +1,7 @@
 import { Outlet, useLocation } from "react-router-dom";
 import { SidebarNav } from "../components/SidebarNav";
 
-export const MainLayout = () => {
+export const MainLayout = ({ user }) => {
   const location = useLocation();
   const isIntro = location.pathname === "/";
 
