@@ -404,7 +404,7 @@ export const Slytherin = () => {
               <img
                 src={Award_PNG}
                 loop
-                autoplay
+                autoPlay
                 className="w-35 h-35 drop-shadow-[0_0_12px_#facd6c] pointer-events-none"
               />
             </button>
