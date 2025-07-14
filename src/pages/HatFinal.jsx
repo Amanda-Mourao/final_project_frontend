@@ -150,7 +150,7 @@ export const HatFinal = () => {
           <img
             src={HAT_GIF}
             alt="Sorting Hat"
-            className="w-[320px] h-[320px] md:w-[420px] md:h-[420px] mx-auto pointer-events-none drop-shadow-2xl"
+            className="w-[320px] object-contain h-[320px] md:w-[420px] md:h-[420px] mx-auto pointer-events-none drop-shadow-2xl"
             draggable={false}
           />
           {/* Audio */}
@@ -170,7 +170,7 @@ export const HatFinal = () => {
           <img
             src={HOUSE_WAPPEN[winnerHouse]}
             alt={`${winnerHouse} crest`}
-            className="w-[320px] h-[320px] md:w-[420px] md:h-[420px] mx-auto drop-shadow-2xl"
+            className="w-[320px] h-[320px] object-contain md:w-[420px] md:h-[420px] mx-auto drop-shadow-2xl"
             draggable={false}
           />
           <div className="flex mt-2 items-center flex-wrap gap-4">

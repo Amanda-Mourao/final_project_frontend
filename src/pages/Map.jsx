@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { PageTransition } from "../components/PageTransition";
 import { getMe, getUserProgress } from "../utils/api";
 
@@ -15,7 +15,7 @@ const HUFFLEPUFF_COLOR =
 const RAVENCLAW_COLOR =
   "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751878909/ChatGPT_Image_7._Juli_2025_10_55_51_3_dzojes.png";
 const HAT_Logo =
-  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751026084/Favicon_vb1whu.png";
+  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1752490203/Hat-final_ceiykr.png";
 const CHECK_ICON =
   "https://res.cloudinary.com/ddloaxsnx/image/upload/v1752227885/craiyon_115759_image_anyrf2.png";
 
@@ -51,6 +51,7 @@ export const Map = ({ onHouseClick }) => {
   const [hovered, setHovered] = useState(null);
   const [progress, setProgress] = useState(null);
   const uiRef = useRef(null);
+  const navigate = useNavigate();
 
   // FÜßabdrück Effekt
   useEffect(() => {
@@ -63,7 +64,7 @@ export const Map = ({ onHouseClick }) => {
     return () => clearInterval(interval);
   }, []);
 
-  // UseEffekt für User Progress wenn er HOuse abschließt....
+  // UseEffekt für User Progress wenn House abschließt....
   useEffect(() => {
     async function fetchProgress() {
       try {
@@ -104,6 +105,11 @@ export const Map = ({ onHouseClick }) => {
     );
   };
 
+  // Button für den Hut
+  const handleDiscoverHouse = () => {
+    navigate("/hatfinal");
+  };
+
   return (
     <div className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
       <PageTransition />
@@ -122,111 +128,140 @@ export const Map = ({ onHouseClick }) => {
         {renderTracks()}
       </div>
 
-      {/* HUT GIF in der Mitte kommmt aber nur wenn alle Häuser fertig */}
+      {/* HUT GIF in der Mitte kommt aber nur wenn alle Häuser fertig */}
       {allDone && (
-        <NavLink to="/hatfinal">
+        <div className="absolute top-1/2 left-1/2 flex flex-col items-center -translate-x-1/2 -translate-y-1/2 z-[9999] pointer-events-auto">
           <img
             src={HAT_Logo}
             alt="Sorting Hat"
-            className="absolute top-1/2 left-1/2 w-60 -translate-x-1/2 -translate-y-1/2 
-            drop-shadow-[0_0_24px_#facd6c] z-40 zooming-wappe"
+            className="w-50 mb-10  zooming-wappe pointer-events-none"
           />
-        </NavLink>
+          <button
+            onClick={handleDiscoverHouse}
+            className="px-3 py-3 bg-[var(--color-text)]/60 hover:bg-[var(--color-text)] cursor-pointer pointer-events-auto
+             text-amber-950 font-bold rounded-lg shadow-lg  transition-colors text-xl"
+          >
+            get your House
+          </button>
+        </div>
       )}
-
       {/* 2 Häuser-Wappen und Status */}
       <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
         <div className="flex flex-row justify-center z-999 gap-90 mb-20 pointer-events-auto">
-          {[HOUSES[0], HOUSES[1]].map((house, i) => (
-            <NavLink
-              key={house.name}
-              to={house.path}
-              aria-label={house.name}
-              className={`outline-none bg-transparent border-none cursor-pointer no-underline ${
-                hovered === i ? "z-20" : "z-10"
-              }`}
-              onMouseEnter={() => setHovered(i)}
-              onMouseLeave={() => setHovered(null)}
-              onClick={() => onHouseClick && onHouseClick(house.name)}
-            >
+          {[HOUSES[0], HOUSES[1]].map((house, i) => {
+            const completed = isHouseCompleted(house.progressKey);
+            return completed ? (
               <div
-                className={`relative house-size transition-all duration-300 ease-[cubic-bezier(.53,1.82,.48,.86)] ${
-                  hovered === i
-                    ? "house-size-hover scale-110 drop-shadow-[0_0_40px_#fff8] z-20"
-                    : "scale-100 drop-shadow-[0_0_8px_#2226] z-10"
-                }`}
+                key={house.name}
+                className="outline-none bg-transparent border-none no-underline cursor-default pointer-events-none z-10"
               >
-                <img
-                  src={house.imgColor}
-                  alt={house.name}
-                  className={`
-                    zooming-wappe absolute object-contain w-full h-full
-                    transition-all duration-500 ease-in-out
-                    ${
-                      !isHouseCompleted(house.progressKey) && hovered !== i
-                        ? "filter sepia brightness-90"
-                        : ""
-                    }
-                  `}
-                  draggable={false}
-                />
-                {/* Blockade wenn abgeschlossen */}
-                {isHouseCompleted(house.progressKey) && (
+                {/* KEINE Animation/KEIN zooming-wappe, wenn House abgeschlossen ist*/}
+                <div className="relative house-size scale-100 drop-shadow-[0_0_8px_#2226] z-10 transition-none">
+                  <img
+                    src={house.imgColor}
+                    alt={house.name}
+                    className="absolute object-contain w-full h-full"
+                    draggable={false}
+                  />
+                  {/* Check-Icon */}
                   <img
                     src={CHECK_ICON}
                     alt="Abgeschlossen"
-                    className="absolute -top-6 zooming-wappe -right-5 w-20 h-20 z-50 drop-shadow-[0_0_8px_#facd6c]"
+                    className="absolute -top-6 -right-5 w-20 h-20 z-50 drop-shadow-[0_0_8px_#facd6c]"
                   />
-                )}
+                </div>
               </div>
-            </NavLink>
-          ))}
+            ) : (
+              <NavLink
+                key={house.name}
+                to={house.path}
+                aria-label={house.name}
+                className={`outline-none bg-transparent border-none cursor-pointer no-underline ${
+                  hovered === i ? "z-20" : "z-10"
+                }`}
+                onMouseEnter={() => setHovered(i)}
+                onMouseLeave={() => setHovered(null)}
+                onClick={() => onHouseClick && onHouseClick(house.name)}
+              >
+                <div
+                  className={`relative house-size transition-all duration-300 ease-[cubic-bezier(.53,1.82,.48,.86)] ${
+                    hovered === i
+                      ? "house-size-hover scale-110 drop-shadow-[0_0_40px_#fff8] z-20"
+                      : "scale-100 drop-shadow-[0_0_8px_#2226] z-10"
+                  }`}
+                >
+                  <img
+                    src={house.imgColor}
+                    alt={house.name}
+                    className={`
+                      zooming-wappe absolute object-contain w-full h-full
+                      transition-all duration-500 ease-in-out
+                      ${hovered !== i ? "filter sepia brightness-90" : ""}
+                    `}
+                    draggable={false}
+                  />
+                </div>
+              </NavLink>
+            );
+          })}
         </div>
         <div className="flex flex-row z-999 justify-center gap-90 pointer-events-auto">
-          {[HOUSES[2], HOUSES[3]].map((house, i) => (
-            <NavLink
-              key={house.name}
-              to={house.path}
-              aria-label={house.name}
-              className={`outline-none bg-transparent border-none cursor-pointer no-underline ${
-                hovered === i + 2 ? "z-20" : "z-10"
-              }`}
-              onMouseEnter={() => setHovered(i + 2)}
-              onMouseLeave={() => setHovered(null)}
-              onClick={() => onHouseClick && onHouseClick(house.name)}
-            >
+          {[HOUSES[2], HOUSES[3]].map((house, i) => {
+            const completed = isHouseCompleted(house.progressKey);
+            return completed ? (
               <div
-                className={`relative house-size transition-all duration-300 ease-[cubic-bezier(.53,1.82,.48,.86)] ${
-                  hovered === i + 2
-                    ? "house-size-hover scale-110 drop-shadow-[0_0_40px_#fff8] z-20"
-                    : "scale-100 drop-shadow-[0_0_8px_#2226] z-10"
-                }`}
+                key={house.name}
+                className="outline-none bg-transparent border-none no-underline cursor-default pointer-events-none z-10"
               >
-                <img
-                  src={house.imgColor}
-                  alt={house.name}
-                  className={`
-                    zooming-wappe absolute object-contain w-full h-full
-                    transition-all duration-500 ease-in-out
-                    ${
-                      !isHouseCompleted(house.progressKey) && hovered !== i + 2
-                        ? "filter sepia brightness-90"
-                        : ""
-                    }
-                  `}
-                  draggable={false}
-                />
-                {/* Blockade wenn abgeschlossen */}
-                {isHouseCompleted(house.progressKey) && (
+                {/* KEINE Animation/KEIN zooming-wappe, wenn House abgeschlossen ist*/}
+                <div className="relative house-size scale-100 drop-shadow-[0_0_8px_#2226] z-10 transition-none">
+                  <img
+                    src={house.imgColor}
+                    alt={house.name}
+                    className="absolute object-contain w-full h-full"
+                    draggable={false}
+                  />
+                  {/* Check-Icon */}
                   <img
                     src={CHECK_ICON}
                     alt="Abgeschlossen"
-                    className="absolute -top-6 zooming-wappe -right-5 w-20 h-20 z-50 drop-shadow-[0_0_8px_#facd6c]"
+                    className="absolute -top-6 -right-5 w-20 h-20 z-50 drop-shadow-[0_0_8px_#facd6c]"
                   />
-                )}
+                </div>
               </div>
-            </NavLink>
-          ))}
+            ) : (
+              <NavLink
+                key={house.name}
+                to={house.path}
+                aria-label={house.name}
+                className={`outline-none bg-transparent border-none cursor-pointer no-underline ${
+                  hovered === i + 2 ? "z-20" : "z-10"
+                }`}
+                onMouseEnter={() => setHovered(i + 2)}
+                onMouseLeave={() => setHovered(null)}
+                onClick={() => onHouseClick && onHouseClick(house.name)}
+              >
+                <div
+                  className={`relative house-size transition-all duration-300 ease-[cubic-bezier(.53,1.82,.48,.86)] ${
+                    hovered === i + 2
+                      ? "house-size-hover scale-110 drop-shadow-[0_0_40px_#fff8] z-20"
+                      : "scale-100 drop-shadow-[0_0_8px_#2226] z-10"
+                  }`}
+                >
+                  <img
+                    src={house.imgColor}
+                    alt={house.name}
+                    className={`
+                      zooming-wappe absolute object-contain w-full h-full 
+                      transition-all duration-500 ease-in-out
+                      ${hovered !== i + 2 ? "filter sepia brightness-90" : ""}
+                    `}
+                    draggable={false}
+                  />
+                </div>
+              </NavLink>
+            );
+          })}
         </div>
       </div>
     </div>
