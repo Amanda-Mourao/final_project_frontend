@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
-import { MainLayout } from "./layout/mainLayout.jsx";
+import { MainLayout } from "./layout/MainLayout.jsx";
 import Home from "./pages/Home.jsx";
 import { Map } from "./pages/Map.jsx";
 import { Gryffindor } from "./pages/Gryffindor.jsx";
