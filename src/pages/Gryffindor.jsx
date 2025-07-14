@@ -7,6 +7,7 @@ import {
   updateUserProgress,
   initUserProgress,
 } from "../utils/api";
+import { useNavigate } from "react-router-dom";
 
 const ARROW_IMG =
   "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751037480/arrow_ygrkzv.webp";
@@ -210,6 +211,8 @@ export const Gryffindor = () => {
   const [progress, setProgress] = useState(null);
   const [saving, setSaving] = useState(false);
 
+  const navigate = useNavigate();
+
   useEffect(() => {
     const fetchUserProgress = async () => {
       try {
@@ -281,7 +284,7 @@ export const Gryffindor = () => {
 
   const handleMap = async () => {
     if (!user) {
-      window.location.href = "/map";
+      navigate("/map");
       return;
     }
     setSaving(true);
@@ -327,7 +330,7 @@ export const Gryffindor = () => {
       alert("Error while saving your progress.");
     }
     setSaving(false);
-    window.location.href = "/map";
+    navigate("/map");
   };
 
   const getArrowPoints = (correct) => (correct ? 10 : 0);
