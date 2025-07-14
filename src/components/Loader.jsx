@@ -4,7 +4,11 @@ const Loading =
 export const Loader = () => {
   return (
     <div className="fixed top-0 left-0 w-full h-full bg-black flex items-center justify-center z-9999">
-      <img src={Loading} alt="Loading..." className="w-[300px] h-[300px]" />
+      <img
+        src={Loading}
+        alt="Loading..."
+        className="w-[300px] h-[300px] object-contain"
+      />
     </div>
   );
 };
