@@ -458,16 +458,17 @@ const SnakeLetterMission = ({ onComplete, missionIdx }) => {
   return (
     <div
       className="fixed inset-0 z-50 flex items-center justify-center bg-black
-     transition-all duration-1000 w-full h-full overflow-hidden"
+                transition-all duration-1000 w-full h-full overflow-hidden"
     >
       {phase === "typing" && (
         <div
           className="absolute left-1/2 top-1/2 z-40 -translate-x-1/2 -translate-y-1/2 
-        flex flex-col items-center w-[94vw] max-w-[560px]"
+                    flex flex-col items-center w-[94vw] max-w-[560px]"
         >
           <div
             className="bg-black/80 text-white rounded-2xl px-9 py-9 text-lg shadow-2xl 
-          whitespace-pre-line text-center tracking-wider leading-relaxed min-h-[120px]  transition-opacity duration-800"
+                      whitespace-pre-line text-center tracking-wider leading-relaxed min-h-[120px]  
+                      transition-opacity duration-800"
           >
             {renderWithLineBreaks(displayedText)}
             {!typingDone && <span className="blink-cursor">|</span>}
@@ -482,22 +483,9 @@ const SnakeLetterMission = ({ onComplete, missionIdx }) => {
             loop
             muted
             playsInline
-            className="
-    fixed
-    left-1/2
-    top-1/2
-    z-30
-    -translate-x-1/2
-    -translate-y-1/2
-    w-[970px]
-    h-[970px]
-    object-contain
-    pointer-events-none
-    transition-opacity
-    transition-filter
-    duration-[1100ms]
-    [transition-timing-function:cubic-bezier(.14,1.1,.8,1.1)]
-  "
+            className="fixed left-1/2 top-1/2 z-30 -translate-x-1/2 -translate-y-1/2 w-[970px] h-[970px] 
+                      pointer-events-none transition-opacity transition-filter duration-[1100ms]
+                      [transition-timing-function:cubic-bezier(.14,1.1,.8,1.1)] object-contain"
             style={{
               opacity:
                 result === "success"

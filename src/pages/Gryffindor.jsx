@@ -242,17 +242,29 @@ export const Gryffindor = () => {
     }
   }, [round, step]);
 
+  // Timer für arrows
   useEffect(() => {
     if (step === 0 && showArrows) {
-      const countdown = setInterval(() => setTimer((t) => t - 1), 1000);
-      const timeout = setTimeout(() => {
+      setTimer(5);
+      let interval = null;
+      let timeout = null;
+      interval = setInterval(() => {
+        setTimer((t) => {
+          if (t <= 0) {
+            clearInterval(interval);
+            return 0;
+          }
+          return t - 1;
+        });
+      }, 1000);
+      timeout = setTimeout(() => {
         setShowArrows(false);
         setStep(1);
         setTimer(4);
-        clearInterval(countdown);
-      }, 3000);
+        clearInterval(interval);
+      }, 5000);
       return () => {
-        clearInterval(countdown);
+        clearInterval(interval);
         clearTimeout(timeout);
       };
     }
@@ -507,7 +519,7 @@ export const Gryffindor = () => {
                         <br />
                         <span className="text-lg text-text">
                           The arrows will disappear in{" "}
-                          <span className="text-[var(--color-attention)] text-2xl font-bold">
+                          <span className="text-[var(--color-attention)] text-xl font-bold border-1 pl-3 pr-3 mr-1 ml-1 rounded-lg">
                             {timer}
                           </span>{" "}
                           seconds.
