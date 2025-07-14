@@ -1,6 +1,5 @@
 import { useState, useRef, useEffect } from "react";
 import { AllGamesHufflepuff } from "../components/AllGamesHufflepuff";
-
 import {
   getMe,
   getUserProgress,
@@ -66,14 +65,20 @@ const TOOLS = [
 
 const BACKGROUND_IMG =
   "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751565332/Huffelpuf-haus_cse36l.png";
+
 const ROUNDS = 3;
+
 const PLANT_LIFE_START = 100;
+
 const PLANTS_SUCCESS_IMG =
   "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751896637/Pflanze-1_laatdy_2_ru5mjz.png";
+
 const PLANTS_FAIL_IMG =
   "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751896768/ChatGPT_Image_7._Juli_2025_15_59_12_rynzma.png";
+
 const Award_PNG =
   "https://res.cloudinary.com/ddloaxsnx/image/upload/v1752227885/craiyon_115759_image_anyrf2.png";
+
 const ARTEFACT_PNG =
   "https://res.cloudinary.com/ddloaxsnx/image/upload/v1752156480/craiyon_160752_image_r9xahv.png";
 
@@ -159,12 +164,12 @@ export const Hufflepuff = () => {
   const [fade, setFade] = useState(false);
   const [showFail, setShowFail] = useState(false);
 
-  // User-Progress-States
+  // User-Progress
   const [user, setUser] = useState(null);
   const [progress, setProgress] = useState(null);
   const [saving, setSaving] = useState(false);
 
-  // Lade User und Progress
+  // Lade UserProgress
   useEffect(() => {
     async function fetchUserProgress() {
       try {
@@ -427,7 +432,7 @@ export const Hufflepuff = () => {
                 Hufflepuff – Round {getCurrentPlantRound()}/{ROUNDS}
               </h1>
               <p className="text-2xl text-text mb-8 text-center">
-                Fullfill their needs!
+                Drag the required symbol to each plant to fulfill its needs.
               </p>
               <div className="flex flex-row items-end justify-center gap-6 w-full mb-10">
                 {plants.map((plant, idx) => (

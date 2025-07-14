@@ -94,7 +94,7 @@ export const AllGamesHufflepuff = ({
   const [badgerShow, setBadgerShow] = useState(true);
   const [showBadgerContinue, setShowBadgerContinue] = useState(false);
 
-  // --- Texts für die Missionen
+  // --- Text für die Missionen
   const PUFF_MISSION_TEXT =
     "A stray Puffskein appears! It looks hungry and in desperate need of care. Will you take care of it?";
   const MANDRAKE_MISSION_TEXT =
@@ -102,7 +102,7 @@ export const AllGamesHufflepuff = ({
   const BADGER_MISSION_TEXT =
     "You spot a shy badger hiding in a hollow tree. Can you coax it out with a magic spell and become friends?";
 
-  // --- Typing Intro ---
+  // --- Typing ---
   useEffect(() => {
     setMissionPhase("fade");
   }, [missionType]);
