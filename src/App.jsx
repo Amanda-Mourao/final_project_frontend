@@ -22,7 +22,7 @@ import { Hufflepuff } from "./pages/Hufflepuff.jsx";
 import { HufflepuffHat } from "./pages/HufflepuffHat.jsx";
 import { RavenclawHat } from "./pages/RavenclawHat.jsx";
 import { getMe } from "./utils/api";
-import { ProtectedRoute } from "./components/protectedRoute.jsx";
+import { ProtectedRoute } from "./components/ProtectedRoute.jsx";
 import Forbidden from "./pages/Forbidden.jsx";
 import { Loader } from "./components/Loader.jsx";
 import { AudioProvider } from "./components/AudioContext.jsx";
