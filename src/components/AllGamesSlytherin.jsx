@@ -18,7 +18,7 @@ const FIRE_TYPING_TEXT =
   "A classmate mixed the wrong ingredients. The cauldron exploded and fire is spreading!\nWhich spell puts out the fire?";
 
 const SNAKE_TYPING_TEXT =
-  "While getting new ingredients a snake appears. Put all letters in Parseltongue order to calm it.";
+  "While getting new ingredients a snake appears. \nType the letters of the magic word one by one in the field below, in the correct Parseltongue order, to calm it down.";
 
 const FROG_TYPING_TEXT =
   "A classmate has turned into a frog-like creature due to a potion accident.\nWhich potion turns him back into a human?";
@@ -619,33 +619,16 @@ const SnakeLetterMission = ({ onComplete, missionIdx }) => {
           )}
         </>
       )}
-      {showSuccess && (
+      {(showSuccess || showFail) && (
         <div className="fixed inset-0 flex flex-col items-center justify-center z-[120] bg-black">
-          <span className="text-4xl font-black text-white tracking-wider animate-fade-in">
-            Well done! You calmed the snake.
+          <span className="text-4xl font-black text-white mb-8 tracking-wider animate-fade-in">
+            {showSuccess ? "Well done! You calmed the snake." : "Game Over"}
           </span>
           <button
             onClick={handleContinue}
             className="w-72 py-4 pl-4 pr-4 rounded-lg text-xl font-bold transition bg-[var(--color-b)] 
-                        hover:bg-[var(--color-b-shadow)] hover:text-[var(--color-b)] drop-shadow-[0_0_10px_#00FFFF] 
-                        shadow-lg text-white disabled:opacity-50 disabled:cursor-not-allowed"
-            autoFocus
-          >
-            Continue
-          </button>
-        </div>
-      )}
-
-      {showFail && (
-        <div className="fixed inset-0 flex flex-col items-center justify-center z-[120] bg-black/0">
-          <span className="text-4xl font-black text-white mb-8 animate-fade-in">
-            Game Over
-          </span>
-          <button
-            onClick={handleContinue}
-            className="w-72 py-4 pl-4 pr-4 rounded-lg text-xl font-bold transition bg-[var(--color-b)] 
-                        hover:bg-[var(--color-b-shadow)] hover:text-[var(--color-b)] drop-shadow-[0_0_10px_#00FFFF] 
-                        shadow-lg text-white disabled:opacity-50 disabled:cursor-not-allowed"
+        hover:bg-[var(--color-b-shadow)] hover:text-[var(--color-b)] drop-shadow-[0_0_10px_#00FFFF] 
+        shadow-lg text-white disabled:opacity-50 disabled:cursor-not-allowed"
             autoFocus
           >
             Continue
