@@ -18,7 +18,7 @@ const BLOCKING_STONE_IMG =
 
 // Typing Text Animation
 const DOG_MISSION_TEXT =
-  "The three-headed dog appears!\nCast the spell 'musica' and catch the moving button before the time runs out to make him fall asleep!";
+  "The three-headed dog appears!\nCast the spell 'musica' and click the moving button before the time runs out to make him fall asleep!";
 
 const DOOR_MISSION_TEXT =
   "A locked door blocks your way!\nWhich spell will open it?";
@@ -69,6 +69,9 @@ export const AllGamesGryffindor = ({
   // Tür öffnen Transition
   const [doorOpenTransition, setDoorOpenTransition] = useState(false);
 
+  // Neu: Delay für Door-Success-UI und Success-Continue
+  const [doorSuccessDelay, setDoorSuccessDelay] = useState(false);
+
   //Stein bewegen
   const [stoneMoveTransition, setStoneMoveTransition] = useState(false);
 
@@ -80,26 +83,16 @@ export const AllGamesGryffindor = ({
     setDoorResult(correct);
     if (correct) {
       setDoorOpenTransition(true);
+
+      // Erst nach Übergang Door-Success Overlay & Continue anzeigen
+      setDoorSuccessDelay(false);
       setTimeout(() => {
-        setMissionFade(true);
-        setTimeout(() => {
-          setMissionPhase("");
-          setMissionType("");
-          setDisplayedMissionText("");
-          setMissionTypingDone(false);
-          setMissionFade(false);
-          setShowArrows(true);
-          setInput([]);
-          setSequence((sequence) => [...sequence]);
-          setTimer(5);
-          setStep(0);
-          setRound(2);
-          setDoorOpenTransition(false);
-        }, 2000);
+        setDoorSuccessDelay(true);
       }, 2200);
     }
   };
 
+  // Door Game Over & Door Success Continue
   const handleDoorGameOverContinue = () => {
     setMissionPhase("");
     setMissionType("");
@@ -113,6 +106,26 @@ export const AllGamesGryffindor = ({
     setStep(0);
     setRound(2);
     setDoorOpenTransition(false);
+    setDoorSuccessDelay(false);
+  };
+
+  const handleDoorSuccessContinue = () => {
+    setMissionFade(true);
+    setTimeout(() => {
+      setMissionPhase("");
+      setMissionType("");
+      setDisplayedMissionText("");
+      setMissionTypingDone(false);
+      setMissionFade(false);
+      setShowArrows(true);
+      setInput([]);
+      setSequence((sequence) => [...sequence]);
+      setTimer(5);
+      setStep(0);
+      setRound(2);
+      setDoorOpenTransition(false);
+      setDoorSuccessDelay(false);
+    }, 2000);
   };
 
   // Stein Mission
@@ -547,7 +560,32 @@ export const AllGamesGryffindor = ({
           )}
 
           {/* Mission result beim Erfolg */}
-          {missionPhase === "success" && (
+          {missionPhase === "success" && missionType === "door" && doorSuccessDelay && (
+            <div
+              className={`absolute inset-0 bg-black/70 opacity-100 z-50 flex flex-col items-center justify-center
+                        transition-all duration-[2000ms] fade-in-slow ${
+                          missionFade ? "backdrop-blur-xl" : ""
+                        } ${
+                missionFade ? "opacity-100" : "opacity-0"
+              } pointer-events-auto`}
+            >
+              <span className="text-4xl font-black text-white tracking-wider animate-fade-in mb-8">
+                Well done, the door is open!
+              </span>
+              <button
+                className="w-72 py-4 rounded-lg text-xl font-bold transition bg-[var(--color-b)] 
+                          hover:bg-[var(--color-b-shadow)] hover:text-[var(--color-b)] drop-shadow-[0_0_10px_#00FFFF] 
+                          shadow-lg text-white disabled:opacity-50 disabled:cursor-not-allowed"
+                style={{ pointerEvents: "auto" }}
+                onClick={handleDoorSuccessContinue}
+              >
+                Continue
+              </button>
+            </div>
+          )}
+
+          {/* Mission result beim Erfolg - Stein */}
+          {missionPhase === "success" && missionType === "stone" && (
             <div
               className={`absolute inset-0 bg-black opacity-60 z-50 flex items-center justify-center
                         transition-all duration-[2000ms] ${
@@ -557,9 +595,7 @@ export const AllGamesGryffindor = ({
               } pointer-events-auto`}
             >
               <span className="text-4xl font-black text-white tracking-wider animate-fade-in">
-                {missionType === "door"
-                  ? "Well done, the door is open!"
-                  : "You moved the stone!"}
+                You moved the stone!
               </span>
             </div>
           )}
@@ -567,8 +603,8 @@ export const AllGamesGryffindor = ({
           {/* Mission result fail */}
           {missionPhase === "fail" && (
             <div
-              className="absolute inset-0 bg-black z-50 flex flex-col items-center justify-center 
-                        transition-all duration-[2000ms] opacity-60 pointer-events-auto"
+              className="absolute inset-0 bg-black/70 opacity-100 z-50 flex flex-col items-center justify-center 
+                        transition-all duration-[2000ms] pointer-events-auto fade-in-slow"
             >
               <span className="text-4xl font-black text-white mb-8 animate-fade-in">
                 Game Over
@@ -658,7 +694,7 @@ export const AllGamesGryffindor = ({
           {dogPhase === "sleeping" && (
             <div
               className={
-                `absolute inset-0 bg-black z-40 flex items-center justify-center transition-all duration-[2600ms]` +
+                `absolute inset-0 bg-black z-40 flex items-center justify-center transition-all fade-in-slow duration-[2600ms]` +
                 (dogFade
                   ? " backdrop-blur-2xl opacity-100 pointer-events-auto"
                   : " opacity-0 pointer-events-auto")
@@ -671,8 +707,8 @@ export const AllGamesGryffindor = ({
           )}
           {dogPhase === "gameover" && (
             <div
-              className={`absolute inset-0 bg-black z-40 flex flex-col items-center 
-                        justify-center transition-all duration-[2600ms] opacity-80 pointer-events-auto`}
+              className={`absolute inset-0 bg-black/70 z-40 flex flex-col items-center 
+                        justify-center transition-all duration-[2600ms] opacity-100 fade-in-slow pointer-events-auto`}
             >
               <span className="text-4xl font-black text-white mb-8 animate-fade-in">
                 Game Over

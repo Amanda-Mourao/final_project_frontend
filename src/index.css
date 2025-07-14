@@ -664,6 +664,20 @@ body {
 }
 /* ------------------ */
 
+.fade-in-slow {
+  opacity: 0;
+  animation: fadeInSlow 2.8s ease-out forwards;
+}
+
+@keyframes fadeInSlow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 /* SlytherinSeite-Potions-Hover */
 .magic-glow-hover::before {
   content: "";
