@@ -12,7 +12,7 @@ const WORDS = [
 const WATERGAME_INTRO =
   " A glowing basin shows a twisted word.\n Can you decode the magic?";
 const WATERGAME_IMG =
-  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751977867/ChatGPT_Image_8._Juli_2025_14_19_30_1_lzesxt.png";
+  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1752481229/WaterBasin_qatmi5.png";
 
 const mirrorAndDistort = (word) => {
   const mirrored = word.split("").reverse();
