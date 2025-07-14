@@ -131,8 +131,6 @@ const App = () => {
           />
           <Route path="/forbidden" element={<Forbidden />} />
         </Route>
-
-        <Route path="*" element={<NotFound />} />
       </Routes>
     </AudioProvider>
   );
