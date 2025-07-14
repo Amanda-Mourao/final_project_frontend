@@ -7,6 +7,7 @@ import {
   updateUserProgress,
   initUserProgress,
 } from "../utils/api";
+import { useNavigate } from "react-router-dom";
 
 // --- Bilder und Daten ---
 const INGREDIENTS = [
@@ -196,6 +197,8 @@ export const Slytherin = () => {
   const [progress, setProgress] = useState(null);
   const [saving, setSaving] = useState(false);
 
+  const navigate = useNavigate();
+
   useEffect(() => {
     // Lade UserProgress
     const fetchUserProgress = async () => {
@@ -275,7 +278,7 @@ export const Slytherin = () => {
   // Speichern des Fortschritts in Mongo!
   const handleMap = async () => {
     if (!user) {
-      window.location.href = "/map";
+      navigate("/map");
       return;
     }
     setSaving(true);
@@ -306,7 +309,7 @@ export const Slytherin = () => {
       alert("Error while saving your progress");
     }
     setSaving(false);
-    window.location.href = "/map";
+    navigate("/map");
   };
 
   return (

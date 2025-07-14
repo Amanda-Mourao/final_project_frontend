@@ -7,6 +7,7 @@ import {
   updateUserProgress,
   initUserProgress,
 } from "../utils/api";
+import { useNavigate } from "react-router-dom";
 
 //Bilder als Links Cloudinary
 const RAVENCLAW_IMAGE =
@@ -222,7 +223,7 @@ export const Ravenclaw = () => {
   const totalScore =
     mainResults.reduce((sum, v) => sum + getMainPoints(v), 0) +
     missionResults.reduce((a, b) => a + b.points, 0);
-
+  const navigate = useNavigate();
   // --- User Progress laden ---
   useEffect(() => {
     async function fetchUserProgress() {
@@ -289,7 +290,7 @@ export const Ravenclaw = () => {
   // Fortschritt müssen hier speichern
   async function handleMap() {
     if (!user) {
-      window.location.href = "/map";
+      navigate("/map");
       return;
     }
     setSaving(true);
@@ -314,7 +315,7 @@ export const Ravenclaw = () => {
       alert("Error saving your progress.");
     }
     setSaving(false);
-    window.location.href = "/map";
+    navigate("/map");
   }
 
   // Feedback-Screen

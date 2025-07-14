@@ -6,6 +6,7 @@ import {
   updateUserProgress,
   initUserProgress,
 } from "../utils/api";
+import { useNavigate } from "react-router-dom";
 
 const PLANTS = [
   {
@@ -169,6 +170,8 @@ export const Hufflepuff = () => {
   const [progress, setProgress] = useState(null);
   const [saving, setSaving] = useState(false);
 
+  const navigate = useNavigate();
+
   // Lade UserProgress
   useEffect(() => {
     async function fetchUserProgress() {
@@ -308,7 +311,7 @@ export const Hufflepuff = () => {
 
   async function handleMap() {
     if (!user) {
-      window.location.href = "/map";
+      navigate("/map");
       return;
     }
     setSaving(true);
@@ -333,7 +336,7 @@ export const Hufflepuff = () => {
       alert("Error saving your progress.");
     }
     setSaving(false);
-    window.location.href = "/map";
+    navigate("/map");
   }
 
   // Feedback screen
