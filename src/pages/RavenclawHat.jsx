@@ -30,7 +30,7 @@ export const RavenclawHat = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       navigate("/ravenclaw");
-    }, 45000);
+    }, 46000);
     return () => clearTimeout(timer);
   }, [navigate]);
 

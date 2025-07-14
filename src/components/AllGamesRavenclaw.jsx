@@ -97,7 +97,7 @@ const WaterGame = ({ onComplete }) => {
         }
         return t - 1;
       });
-    }, 90000);
+    }, 1000);
   };
 
   useEffect(() => {
@@ -231,7 +231,7 @@ const WaterGame = ({ onComplete }) => {
             />
 
             <div className="text-white text-4xl font-bold mb-7 mt-2 transition-opacity duration-700">
-              {resultType === "success" ? "Well done!" : "Try again"}
+              {resultType === "success" ? "Well done!" : "Game Over"}
             </div>
             {resultType === "fail" && (
               <div className="text-white text-xl mb-6">
@@ -311,7 +311,7 @@ const MissionRiddle = ({ onComplete }) => {
           clearInterval(typingIntervalRef.current);
           setTypingDone(true);
         }
-      }, 55);
+      }, 90);
       return () => clearInterval(typingIntervalRef.current);
     }
   }, [phase]);
@@ -363,7 +363,7 @@ const MissionRiddle = ({ onComplete }) => {
         {!showResult ? (
           <div className="flex flex-col items-center w-full">
             <h2 className="text-white text-3xl font-bold mb-6 mt-2">
-              The Door's Riddle
+              The Riddle
             </h2>
 
             <div className="text-white text-2xl font-semibold mb-6 text-center max-w-xl">
@@ -416,7 +416,7 @@ const MissionRiddle = ({ onComplete }) => {
 const GAME_SIZE = 750;
 const CARD_SIZE = 185;
 const CARD_PAIRS = 3;
-const GAME_TIME = 90000;
+const GAME_TIME = 10;
 const REVEAL_TIME = 1.1;
 const CARD_IMAGES = [
   "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751991041/Dance_Dancing_Sticker_by_Fuzzy_Wobble_vzob06.gif",
