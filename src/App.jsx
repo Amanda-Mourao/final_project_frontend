@@ -27,7 +27,7 @@ import Forbidden from "./pages/Forbidden.jsx";
 import { Loader } from "./components/Loader.jsx";
 import { AudioProvider } from "./components/AudioContext.jsx";
 import { HatFinal } from "./pages/HatFinal.jsx";
-import HouseQuiz from "./pages/HouseQuiz.jsx";
+import { HouseQuiz } from "./pages/HouseQuiz.jsx";
 
 const App = () => {
   const [user, setUser] = useState(null);

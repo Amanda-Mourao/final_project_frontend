@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import LoginForm from "../components/LoginForm.jsx";
-import RegisterForm from "../components/RegisterForm.jsx";
+import { LoginForm } from "../components/LoginForm.jsx";
+import { RegisterForm } from "../components/RegisterForm.jsx";
 
 const Intro = ({ onAuth }) => {
   const navigate = useNavigate();
