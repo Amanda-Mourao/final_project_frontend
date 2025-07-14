@@ -13,13 +13,14 @@ const HAT_GIF =
 const PHRASES = [
   `Welcome to Hogwarts, young witch or wizard!`,
   `I am the legendary Sorting Hat, and it is my honor to greet you at the start of your magical journey.`,
-  `My job is to look deep into your heart and mind, and assign you to one of the four great Houses:\nGryffindor, Slytherin, Hufflepuff, or Ravenclaw.`,
+  `My job is to look deep into your heart and mind, and assign you to one of the four great Houses: Gryffindor, Slytherin, Hufflepuff, or Ravenclaw.`,
   `But... wait a moment—something feels very wrong...`,
-  `Oh dear! I... I can't sense your destiny at all! My magic has vanished! Without my powers, I cannot sort anyone.\nThis is most unusual and rather troubling.`,
+  `Oh dear! I... I can't sense your destiny at all! My magic has vanished! Without my powers, I cannot sort anyone.`,
+  `This is most unusual and rather troubling.`,
   `But do not worry! There is still hope. If you help me recover my lost magic, I will be able to sort you properly.`,
   `To do so, you must collect the four powerful artefacts, each hidden within a different House.`,
   `Are you ready for this magical quest?`,
-  `Step forward and choose any House to start your adventure.\nThe Map will guide you—visit every House, help me regain my powers, and together we will restore the magic to Hogwarts!`,
+  `Step forward and choose any House to start your adventure. The Map will guide you—visit every House, help me regain my powers, and together we will restore the magic to Hogwarts!`,
   `Let us begin!`,
 ];
 
