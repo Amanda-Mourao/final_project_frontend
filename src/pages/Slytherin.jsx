@@ -22,7 +22,7 @@ const INGREDIENTS = [
     closed:
       "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751396541/Potion-green-mit_jvp9zs.png",
     open: "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751396541/Potion-green-ohne_pl1bdk.png",
-    hint: "ADDS MYSTERY TO THE POTION.",
+    hint: "ADDS WIT TO THE POTION.",
   },
   {
     name: "MOONSTONE",
@@ -43,19 +43,19 @@ const INGREDIENTS = [
     closed:
       "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751446137/Potion-gelb-mit_abn8s1.png",
     open: "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751446137/Potion-gelb-ohne_ii1dts.png",
-    hint: "BREATHES LIFE INTO THE POTION.",
+    hint: "BRINGS HIDDEN THOUGHTS TO LIFE.",
   },
 ];
 
 const CORRECT_COMBOS = [
-  [0, 1, 4], // Round 1
-  [1, 2, 3], // Round 2
+  [1, 2, 4], // Round 1
+  [0, 2, 3], // Round 2
   [0, 2, 3], // Round 3
 ];
 
 const POTIONS = [
   {
-    name: "elixir of cunning ",
+    name: "elixir of cunning",
     desc: "for cleverness, deception, and strategic thinking.",
   },
   {
