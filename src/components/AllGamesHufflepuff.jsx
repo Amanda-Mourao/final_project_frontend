@@ -96,11 +96,11 @@ export const AllGamesHufflepuff = ({
 
   // --- Text für die Missionen
   const PUFF_MISSION_TEXT =
-    "A stray Puffskein appears! It looks hungry and in desperate need of care. Will you take care of it?";
+    "A stray Puffskein appears! It looks hungry and in desperate need of care. Use the four arrow keys ⬅️ ⬆️ ⬇️ ➡️ on your keyboard to feed him.";
   const MANDRAKE_MISSION_TEXT =
-    "While repotting some plants, you accidentally uncover a shrieking mandrake! Quickly place it back before its scream knocks you out.";
+    "While repotting some plants, you accidentally uncover a shrieking mandrake! Quickly drag it back into the pot before its scream knocks you out.";
   const BADGER_MISSION_TEXT =
-    "You spot a shy badger hiding in a hollow tree. Can you coax it out with a magic spell and become friends?";
+    "You spot a shy badger hiding in a hollow tree. Which spell will coax it out to become friends?";
 
   // --- Typing ---
   useEffect(() => {
