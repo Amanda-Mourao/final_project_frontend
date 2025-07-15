@@ -18,7 +18,7 @@ const FIRE_TYPING_TEXT =
   "A classmate mixed the wrong ingredients. The cauldron exploded and fire is spreading!\nWhich spell puts out the fire?";
 
 const SNAKE_TYPING_TEXT =
-  "While getting new ingredients a snake appears. \nType the letters of the magic word one by one in the field below, in the correct Parseltongue order, to calm it down.";
+  "While getting new ingredients a snake appears. Type the letters of the magic word one by one in the field below, in the correct Parseltongue order, to calm it down.";
 
 const FROG_TYPING_TEXT =
   "A classmate has turned into a frog-like creature due to a potion accident.\nWhich potion turns him back into a human?";
