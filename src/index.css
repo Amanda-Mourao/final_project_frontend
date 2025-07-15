@@ -948,3 +948,60 @@ body {
     transform: scaleY(-1) translateX(3px) translateY(-3px) rotate(-1deg);
   }
 }
+
+/* Hatfinal-Shuffle/Glitch Effekt während Audio */
+.glitch {
+  animation: shuffleGlitch 0.15s infinite alternate;
+  filter: contrast(1.5) brightness(1.2) drop-shadow(0 0 12px #fff8);
+}
+
+@keyframes shuffleGlitch {
+  0% {
+    transform: scale(1) rotate(-2deg);
+  }
+  20% {
+    filter: hue-rotate(20deg) blur(1px);
+  }
+  40% {
+    transform: scale(1.04) rotate(1deg);
+  }
+  60% {
+    filter: hue-rotate(-10deg) blur(2px);
+  }
+  80% {
+    transform: scale(0.98) rotate(-1deg);
+  }
+  100% {
+    filter: hue-rotate(10deg) blur(0.5px);
+  }
+}
+
+.magic-reveal {
+  animation: magicReveal 1.6s cubic-bezier(0.18, 0.89, 0.32, 1) 1;
+}
+
+@keyframes magicReveal {
+  0% {
+    opacity: 0;
+    filter: blur(48px) brightness(1.2);
+    transform: scale(0.92) rotate(-6deg);
+  }
+  30% {
+    opacity: 1;
+    filter: blur(24px) brightness(1.08);
+    transform: scale(1.04) rotate(2deg);
+  }
+  60% {
+    filter: blur(6px) brightness(1);
+    transform: scale(0.98) rotate(-2deg);
+  }
+  80% {
+    filter: blur(1.5px) brightness(0.98);
+    transform: scale(1.02) rotate(0.5deg);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0px) brightness(1);
+    transform: scale(1) rotate(0deg);
+  }
+}
