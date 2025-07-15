@@ -73,13 +73,27 @@ export const SlytherinHat = () => {
       </div>
     ));
 
+  // Skip Button
+  const handleSkip = () => {
+    navigate("/slytherin");
+  };
+
   return (
     <div
       className="w-screen h-screen min-h-screen flex flex-col 
                items-center justify-end relative overflow-hidden bg-black"
     >
-      {/* Background Bild */}
       <PageTransition />
+
+      {/* Skip Button  */}
+      <button
+        onClick={handleSkip}
+        className="fixed top-6 right-8 z-50 px-3 py-3 bg-[var(--color-text)]/60 hover:bg-[var(--color-text)] text-amber-950 font-bold rounded-lg shadow-lg  transition-colors text-xl  tracking-wide"
+      >
+        Skip
+      </button>
+
+      {/* Background Bild */}
       <img
         src={SLYTHERIN_ROOM}
         alt="Slytherin Common Room"
