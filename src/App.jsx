@@ -28,6 +28,7 @@ import { Loader } from "./components/Loader.jsx";
 import { AudioProvider } from "./components/AudioContext.jsx";
 import { HatFinal } from "./pages/HatFinal.jsx";
 import { HouseQuiz } from "./pages/HouseQuiz.jsx";
+import { Contact } from "./pages/Contact.jsx";
 
 const App = () => {
   const [user, setUser] = useState(null);
@@ -118,6 +119,14 @@ const App = () => {
             element={
               <ProtectedRoute user={user}>
                 <HatFinal user={user} onLogout={() => setUser(null)} />
+              </ProtectedRoute>
+            }
+          />
+            <Route
+            path="/contact"
+            element={
+              <ProtectedRoute user={user}>
+                <Contact user={user} onLogout={() => setUser(null)} />
               </ProtectedRoute>
             }
           />

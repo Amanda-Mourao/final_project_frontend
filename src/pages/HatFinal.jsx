@@ -204,7 +204,7 @@ export const HatFinal = () => {
     return playAudioAndReveal();
   }, [audioUrl, winnerHouse]);
 
-  const handleBack = () => navigate("/map");
+  const handleBack = () => navigate("/contact");
   const handleNotSatisfied = () => navigate("/housequiz");
 
   // Glitch für vier Wappen
@@ -275,7 +275,7 @@ export const HatFinal = () => {
                   className="absolute inset-0 rounded-xl blur-sm bg-[var(--color-text)] opacity-0 group-hover:opacity-30 
                 transition duration-300 animate-pulse"
                 />
-                <span className="relative z-10">Back to map</span>
+                <span className="relative z-10">contact us</span>
               </button>
               <button
                 onClick={handleNotSatisfied}

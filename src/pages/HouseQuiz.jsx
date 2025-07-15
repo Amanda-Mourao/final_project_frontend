@@ -293,7 +293,7 @@ export const HouseQuiz = () => {
                 className="absolute inset-0 rounded-xl blur-sm bg-[var(--color-text)] opacity-0 
                           group-hover:opacity-30 transition duration-300 animate-pulse"
               />
-              <span className="relative z-10">get in touch</span>
+              <span className="relative z-10">contact us</span>
             </button>
           </div>
         )}
