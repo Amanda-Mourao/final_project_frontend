@@ -67,11 +67,8 @@ export const Contact = () => (
       Copyright © 2025 Hogwarts and the Hat - H.A.T.
       <br />
       <span className="text-base opacity-70">
-        Amanda Mourao &middot; Parween Ahmad
+        by Amanda &middot; Parween 
       </span>
     </p>
-    <span className="fade-in-slow text-xl text-text opacity-60 mt-2 animate-fade">
-      by Amanda & Parween
-    </span>
   </div>
 );
