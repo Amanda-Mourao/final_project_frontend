@@ -186,7 +186,7 @@ const InfoScreen = () => (
       Copyright © 2025 Hogwarts and the Hat - H.A.T.
       <br />
       <span className="text-base opacity-70">
-        by Amanda &middot; Parween 
+     Amanda Mourao &middot; Parween Ahmad
       </span>
     </p>
   </div>
