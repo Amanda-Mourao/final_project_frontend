@@ -1,7 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-// Bilder und Fragen als Variabel
 const HALL_BG =
   "https://res.cloudinary.com/ddloaxsnx/image/upload/v1752250322/ChatGPT_Image_11._Juli_2025_18_11_34_cwnhk4.png";
 
@@ -59,10 +58,7 @@ const QUESTIONS = [
     question: "It's your day off. What do you choose to do?",
     options: [
       { text: "Work on a goal or plan your next move", house: "Slytherin" },
-      {
-        text: "Try something bold or spontaneous",
-        house: "Gryffindor",
-      },
+      { text: "Try something bold or spontaneous", house: "Gryffindor" },
       {
         text: "Spend time with loved ones or help someone",
         house: "Hufflepuff",
@@ -97,15 +93,110 @@ const getResult = (houseCounts) => {
   const topHouses = Object.entries(houseCounts)
     .filter(([house, count]) => count === max)
     .map(([house]) => house);
-  // zufällig bei Gleichstand
   return topHouses[Math.floor(Math.random() * topHouses.length)];
 };
+
+//Kontakt-finale Seite
+const ToBeContinuedScreen = ({ onFade }) => {
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      onFade();
+    }, 2000);
+    return () => clearTimeout(timer);
+  }, [onFade]);
+  return (
+    <div className="fixed inset-0 min-h-screen w-screen flex flex-col items-center justify-center bg-black z-50 transition-all">
+      <h1 className="fade-in-slow text-3xl md:text-5xl font-extrabold text-text mb-10 mt-20 tracking-wide animate-fade">
+        To be continued ...
+      </h1>
+    </div>
+  );
+};
+
+const LINKEDIN_ICON =
+  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1752588293/craiyon_160445_image_kvyrui.png";
+
+const InfoScreen = () => (
+  <div className="fixed inset-0 min-h-screen w-screen flex flex-col items-center justify-center bg-black z-50 transition-all">
+    <div className="flex flex-row items-end justify-center gap-8 ">
+      {/* Amanda */}
+      <div className="relative w-48 h-[390px] flex flex-col items-center">
+        <img
+          src="https://res.cloudinary.com/ddloaxsnx/image/upload/v1752586012/craiyon_152635_image_iv6f62.png"
+          alt="Amanda"
+          className="w-full h-full object-contain"
+          style={{ maxHeight: 275 }}
+          draggable={false}
+        />
+        {/* Schwarzverlauf von unten */}
+        <div
+          className="absolute left-0 bottom-0 w-full h-2/5 pointer-events-none"
+          style={{
+            background:
+              "linear-gradient(to top, rgba(0,0,0,0.98) 75%, rgba(0,0,0,0.0) 100%)",
+          }}
+        />
+
+        <a
+          href="https://www.linkedin.com/in/amanda-mourao/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-2 pt-1 z-9999 flex justify-center items-center"
+        >
+          <img
+            src={LINKEDIN_ICON}
+            alt="LinkedIn"
+            style={{ width: 60, height: 60 }}
+          />
+        </a>
+      </div>
+      {/* Parween */}
+      <div className="relative w-48 h-[390px] flex flex-col items-center">
+        <img
+          src="https://res.cloudinary.com/ddloaxsnx/image/upload/v1752584943/craiyon_145800_image_wioh4t.png"
+          alt="Parween"
+          className="w-full h-full object-contain"
+          style={{ maxHeight: 280 }}
+          draggable={false}
+        />
+        {/* Schwarzverlauf von unten */}
+        <div
+          className="absolute left-0 bottom-0 w-full h-2/5 pointer-events-none"
+          style={{
+            background:
+              "linear-gradient(to top, rgba(0,0,0,0.98) 75%, rgba(0,0,0,0.0) 100%)",
+          }}
+        />
+
+        <a
+          href="https://www.linkedin.com/in/parween-ahmad/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-2 z-9999 flex justify-center items-center"
+        >
+          <img
+            src={LINKEDIN_ICON}
+            alt="LinkedIn"
+            style={{ width: 60, height: 60 }}
+          />
+        </a>
+      </div>
+    </div>
+    <p className="fade-in-slow text-2xl md:text-3xl text-text mb-2 font-bold animate-fade">
+      Copyright © 2025 Hogwarts and the Hat - H.A.T.
+    </p>
+    <span className="fade-in-slow text-xl text-text opacity-60 mt-2 animate-fade">
+      by Amanda & Parween
+    </span>
+  </div>
+);
 
 export const HouseQuiz = () => {
   const [step, setStep] = useState(0);
   const [answers, setAnswers] = useState([]);
   const [showResult, setShowResult] = useState(false);
-  const navigate = useNavigate();
+  const [showToBeContinued, setShowToBeContinued] = useState(false);
+  const [showInfo, setShowInfo] = useState(false);
 
   const handleAnswer = (house) => {
     if (step < QUESTIONS.length - 1) {
@@ -129,16 +220,26 @@ export const HouseQuiz = () => {
     resultHouse = getResult(houseCounts);
   }
 
+  if (showToBeContinued)
+    return (
+      <ToBeContinuedScreen
+        onFade={() => {
+          setShowToBeContinued(false);
+          setShowInfo(true);
+        }}
+      />
+    );
+  if (showInfo) return <InfoScreen />;
+
   return (
     <div className="relative min-h-screen w-screen flex flex-col items-center justify-center overflow-hidden bg-black">
-      {/* Background Bild */}
       <img
         src={HALL_BG}
         alt="Mirror Hall"
         className="fixed inset-0 w-full h-full object-top z-0"
         draggable={false}
       />
-      {/* Fragen */}
+
       <div className="absolute left-30 -translate-y-1/2 flex flex-col items-start z-10 w-full md:w-1/2 px-6 md:px-14">
         <div className="text-white font-bold text-2xl md:text-3xl select-none pointer-events-none mb-4">
           {!showResult ? (
@@ -146,7 +247,6 @@ export const HouseQuiz = () => {
               <div className="mb-4 text-[var(--color-text)] pointer-events-auto">
                 <div className="text-lg mb-1 font-semibold"></div>
                 <span> {step + 1}. </span>
-
                 {QUESTIONS[step].question}
               </div>
             </>
@@ -184,7 +284,7 @@ export const HouseQuiz = () => {
               You are a {resultHouse}!
             </h1>
             <button
-              onClick={() => navigate("/map")}
+              onClick={() => setShowToBeContinued(true)}
               className="relative group active:scale-95 text-[var(--color-text)] font-bold text-lg px-6 py-3 
                         rounded-xl shadow-md border-2 border-[var(--color-text)] transition-all duration-150 
                         uppercase tracking-widest overflow-hidden"
@@ -193,7 +293,7 @@ export const HouseQuiz = () => {
                 className="absolute inset-0 rounded-xl blur-sm bg-[var(--color-text)] opacity-0 
                           group-hover:opacity-30 transition duration-300 animate-pulse"
               />
-              <span className="relative z-10">Back to map</span>
+              <span className="relative z-10">get in touch</span>
             </button>
           </div>
         )}
