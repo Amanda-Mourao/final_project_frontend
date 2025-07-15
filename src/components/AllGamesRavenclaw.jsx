@@ -6,7 +6,7 @@ const WORDS = [
   "lumos",
   "hogwarts",
   "pensieve",
-  "runes",
+  "dobby",
   "leviosa",
 ];
 const WATERGAME_INTRO =
