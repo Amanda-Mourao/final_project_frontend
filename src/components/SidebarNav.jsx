@@ -64,12 +64,12 @@ export const SidebarNav = () => {
       {navItems.map((item) => {
         const Content = (
           <>
-            <span className="flex items-center justify-center text-black w-12 h-12">
+            <span className="flex items-center justify-center text-[#461901] w-12 h-12">
               {item.icon}
             </span>
             <span
               className="ml-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300
-                        whitespace-nowrap text-base font-bold text-black pointer-events-none select-none"
+                        whitespace-nowrap text-base font-bold text-[#461901] pointer-events-none select-none"
             >
               {item.label}
             </span>
