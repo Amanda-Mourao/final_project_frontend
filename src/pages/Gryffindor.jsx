@@ -384,7 +384,7 @@ export const Gryffindor = () => {
 
   return (
     <div>
-      <PageTransition />
+      {/* <PageTransition /> */}
       <div
         className="min-h-screen flex flex-col items-center justify-center bg-cover bg-center"
         style={

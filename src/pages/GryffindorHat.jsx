@@ -31,7 +31,7 @@ export const GryffindorHat = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       navigate("/gryffindor");
-    }, 50000);
+    }, 54000);
     return () => clearTimeout(timer);
   }, [navigate]);
 
@@ -83,7 +83,7 @@ export const GryffindorHat = () => {
       className="w-screen h-screen min-h-screen flex flex-col 
                 items-center justify-end relative overflow-hidden bg-black"
     >
-      <PageTransition />
+      {/* <PageTransition /> */}
 
       {/* Skip Button  */}
       <button
