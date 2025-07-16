@@ -1,5 +1,5 @@
 const LINKEDIN_ICON =
-  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1752588293/craiyon_160445_image_kvyrui.png";
+  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1752588293/craiyon_160445_image_kvyrui.webp";
 
 export const Contact = () => (
   <div className="fixed inset-0 min-h-screen w-screen flex flex-col items-center justify-center bg-black z-50 transition-all">
@@ -7,7 +7,7 @@ export const Contact = () => (
       {/* Amanda */}
       <div className="relative w-48 h-[390px] flex flex-col items-center">
         <img
-          src="https://res.cloudinary.com/ddloaxsnx/image/upload/v1752586012/craiyon_152635_image_iv6f62.png"
+          src="https://res.cloudinary.com/ddloaxsnx/image/upload/v1752586012/craiyon_152635_image_iv6f62.webp"
           alt="Amanda"
           className="w-full h-full object-contain"
           style={{ maxHeight: 275 }}
@@ -36,7 +36,7 @@ export const Contact = () => (
       {/* Parween */}
       <div className="relative w-48 h-[390px] flex flex-col items-center">
         <img
-          src="https://res.cloudinary.com/ddloaxsnx/image/upload/v1752584943/craiyon_145800_image_wioh4t.png"
+          src="https://res.cloudinary.com/ddloaxsnx/image/upload/v1752584943/craiyon_145800_image_wioh4t.webp"
           alt="Parween"
           className="w-full h-full object-contain"
           style={{ maxHeight: 280 }}
@@ -67,7 +67,7 @@ export const Contact = () => (
       Copyright © 2025 Hogwarts and the Hat - H.A.T.
       <br />
       <span className="text-base opacity-70">
-         Amanda Mourao &middot; Parween Ahmad
+        Amanda Mourao &middot; Parween Ahmad
       </span>
     </p>
   </div>

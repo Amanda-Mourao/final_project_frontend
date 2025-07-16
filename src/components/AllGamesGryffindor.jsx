@@ -2,19 +2,19 @@ import { useState, useEffect, useRef } from "react";
 
 // Cloudinary Bilder als Variabeln
 const DOG_IMG =
-  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751109258/Fluffy-nobg_ib3fak.png";
+  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751109258/Fluffy-nobg_ib3fak.webp";
 
 const DOOR_IMG =
-  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751108526/T%C3%BCrZU_zbktie.png";
+  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751108526/T%C3%BCrZU_zbktie.webp";
 
 const DOOR_OPEN_IMG =
-  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751108526/T%C3%BCrAuf_yzsbez.png";
+  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751108526/T%C3%BCrAuf_yzsbez.webp";
 
 const STONE_IMG =
-  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751276277/Weg-ohne-stein_qr3oru.png";
+  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751276277/Weg-ohne-stein_qr3oru.webp";
 
 const BLOCKING_STONE_IMG =
-  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751276923/Weg-mit-stein_ivoy0v.png";
+  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751276923/Weg-mit-stein_ivoy0v.webp";
 
 // Typing Text Animation
 const DOG_MISSION_TEXT =
@@ -560,29 +560,31 @@ export const AllGamesGryffindor = ({
           )}
 
           {/* Mission result beim Erfolg */}
-          {missionPhase === "success" && missionType === "door" && doorSuccessDelay && (
-            <div
-              className={`absolute inset-0 bg-black/70 opacity-100 z-50 flex flex-col items-center justify-center
+          {missionPhase === "success" &&
+            missionType === "door" &&
+            doorSuccessDelay && (
+              <div
+                className={`absolute inset-0 bg-black/70 opacity-100 z-50 flex flex-col items-center justify-center
                         transition-all duration-[2000ms] fade-in-slow ${
                           missionFade ? "backdrop-blur-xl" : ""
                         } ${
-                missionFade ? "opacity-100" : "opacity-0"
-              } pointer-events-auto`}
-            >
-              <span className="text-4xl font-black text-white tracking-wider animate-fade-in mb-8">
-                Well done, the door is open!
-              </span>
-              <button
-                className="w-72 py-4 rounded-lg text-xl font-bold transition bg-[var(--color-b)] 
+                  missionFade ? "opacity-100" : "opacity-0"
+                } pointer-events-auto`}
+              >
+                <span className="text-4xl font-black text-white tracking-wider animate-fade-in mb-8">
+                  Well done, the door is open!
+                </span>
+                <button
+                  className="w-72 py-4 rounded-lg text-xl font-bold transition bg-[var(--color-b)] 
                           hover:bg-[var(--color-b-shadow)] hover:text-[var(--color-b)] drop-shadow-[0_0_10px_#00FFFF] 
                           shadow-lg text-white disabled:opacity-50 disabled:cursor-not-allowed"
-                style={{ pointerEvents: "auto" }}
-                onClick={handleDoorSuccessContinue}
-              >
-                Continue
-              </button>
-            </div>
-          )}
+                  style={{ pointerEvents: "auto" }}
+                  onClick={handleDoorSuccessContinue}
+                >
+                  Continue
+                </button>
+              </div>
+            )}
 
           {/* Mission result beim Erfolg - Stein */}
           {missionPhase === "success" && missionType === "stone" && (

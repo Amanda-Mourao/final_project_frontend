@@ -11,17 +11,17 @@ import { useNavigate } from "react-router-dom";
 
 //Bilder als Links Cloudinary
 const RAVENCLAW_IMAGE =
-  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751566510/ChatGPT_Image_3._Juli_2025_20_14_35_vm2sn9.png";
+  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751566510/ChatGPT_Image_3._Juli_2025_20_14_35_vm2sn9.webp";
 const KNIGHT_PNG =
-  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751975062/ChatGPT_Image_8._Juli_2025_13_34_40_cqhxsx_1_avlfgi.png";
+  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751975062/ChatGPT_Image_8._Juli_2025_13_34_40_cqhxsx_1_avlfgi.webp";
 const KNIGHT_DESTROYED_PNG =
-  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751975538/ChatGPT_Image_8._Juli_2025_13_34_40_cqhxsx_3_l54hiw.png";
+  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751975538/ChatGPT_Image_8._Juli_2025_13_34_40_cqhxsx_3_l54hiw.webp";
 const GUARDIAN_PNG =
-  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751975476/ChatGPT_Image_8._Juli_2025_13_34_40_cqhxsx_2_moxp6k.png";
+  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751975476/ChatGPT_Image_8._Juli_2025_13_34_40_cqhxsx_2_moxp6k.webp";
 const ARTEFACT_PNG =
-  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1752156963/ChatGPT_Image_10._Juli_2025_16_15_44_p2b6kb.png";
+  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1752156963/ChatGPT_Image_10._Juli_2025_16_15_44_p2b6kb.webp";
 const Award_PNG =
-  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1752227885/craiyon_115759_image_anyrf2.png";
+  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1752227885/craiyon_115759_image_anyrf2.webp";
 
 const BOARD_SIZE = 8;
 

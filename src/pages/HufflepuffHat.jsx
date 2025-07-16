@@ -4,7 +4,7 @@ import { PageTransition } from "../components/PageTransition";
 
 // Links als Variabeln
 const Hufflepuff_BG =
-  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751565332/Huffelpuf-haus_cse36l.png";
+  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751565332/Huffelpuf-haus_cse36l.webp";
 const HAT_GIF =
   "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751295551/GIF-2025-06-30-12-23-34-unscreen_ysixss.gif";
 

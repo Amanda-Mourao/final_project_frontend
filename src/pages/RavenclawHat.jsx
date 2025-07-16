@@ -4,7 +4,7 @@ import { PageTransition } from "../components/PageTransition";
 
 // Links als Variabeln
 const RAVENCLAW_IMAGE =
-  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751566510/ChatGPT_Image_3._Juli_2025_20_14_35_vm2sn9.png";
+  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751566510/ChatGPT_Image_3._Juli_2025_20_14_35_vm2sn9.webp";
 const HAT_GIF =
   "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751295551/GIF-2025-06-30-12-23-34-unscreen_ysixss.gif";
 

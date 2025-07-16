@@ -4,7 +4,7 @@ import { PageTransition } from "../components/PageTransition";
 
 // Bilder als Variabeln
 const SLYTHERIN_ROOM =
-  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751389728/Slytherin-Haus_zwvojj.png";
+  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751389728/Slytherin-Haus_zwvojj.webp";
 
 const HAT_GIF =
   "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751295551/GIF-2025-06-30-12-23-34-unscreen_ysixss.gif";

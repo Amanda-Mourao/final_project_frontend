@@ -4,7 +4,7 @@ import { PageTransition } from "../components/PageTransition";
 
 // Bilder als Variabeln
 const GRYFFINDOR_ROOM =
-  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751385661/Gryffindor-Haus_jza0mf.png";
+  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751385661/Gryffindor-Haus_jza0mf.webp";
 
 const HAT_GIF =
   "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751295551/GIF-2025-06-30-12-23-34-unscreen_ysixss.gif";

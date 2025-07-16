@@ -5,19 +5,19 @@ import { getMe, getUserProgress } from "../utils/api";
 
 // Bild-URLs als Variablen
 const MAP_BG =
-  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751879062/Mappe-Leer_cl4txj.png";
+  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751879062/Mappe-Leer_cl4txj.webp";
 const GRYFFINDOR_COLOR =
-  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751878917/ChatGPT_Image_7._Juli_2025_10_55_51_1_rfptfw.png";
+  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751878917/ChatGPT_Image_7._Juli_2025_10_55_51_1_rfptfw.webp";
 const SLYTHERIN_COLOR =
-  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751878905/ChatGPT_Image_7._Juli_2025_10_55_51_4_ddz8oh.png";
+  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751878905/ChatGPT_Image_7._Juli_2025_10_55_51_4_ddz8oh.webp";
 const HUFFLEPUFF_COLOR =
-  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751878911/ChatGPT_Image_7._Juli_2025_10_55_51_2_y32nm4.png";
+  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751878911/ChatGPT_Image_7._Juli_2025_10_55_51_2_y32nm4.webp";
 const RAVENCLAW_COLOR =
-  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751878909/ChatGPT_Image_7._Juli_2025_10_55_51_3_dzojes.png";
+  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751878909/ChatGPT_Image_7._Juli_2025_10_55_51_3_dzojes.webp";
 const HAT_Logo =
-  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1752490203/Hat-final_ceiykr.png";
+  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1752490203/Hat-final_ceiykr.webp";
 const CHECK_ICON =
-  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1752227885/craiyon_115759_image_anyrf2.png";
+  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1752227885/craiyon_115759_image_anyrf2.webp";
 
 //   Houses Verlinkung
 const HOUSES = [

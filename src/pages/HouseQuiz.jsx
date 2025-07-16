@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 const HALL_BG =
-  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1752250322/ChatGPT_Image_11._Juli_2025_18_11_34_cwnhk4.png";
+  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1752250322/ChatGPT_Image_11._Juli_2025_18_11_34_cwnhk4.webp";
 
 const QUESTIONS = [
   {
@@ -79,13 +79,13 @@ const QUESTIONS = [
 
 const HOUSE_WAPPEN = {
   Gryffindor:
-    "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751878917/ChatGPT_Image_7._Juli_2025_10_55_51_1_rfptfw.png",
+    "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751878917/ChatGPT_Image_7._Juli_2025_10_55_51_1_rfptfw.webp",
   Slytherin:
-    "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751878905/ChatGPT_Image_7._Juli_2025_10_55_51_4_ddz8oh.png",
+    "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751878905/ChatGPT_Image_7._Juli_2025_10_55_51_4_ddz8oh.webp",
   Hufflepuff:
-    "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751878911/ChatGPT_Image_7._Juli_2025_10_55_51_2_y32nm4.png",
+    "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751878911/ChatGPT_Image_7._Juli_2025_10_55_51_2_y32nm4.webp",
   Ravenclaw:
-    "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751878909/ChatGPT_Image_7._Juli_2025_10_55_51_3_dzojes.png",
+    "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751878909/ChatGPT_Image_7._Juli_2025_10_55_51_3_dzojes.webp",
 };
 
 const getResult = (houseCounts) => {
@@ -114,7 +114,7 @@ const ToBeContinuedScreen = ({ onFade }) => {
 };
 
 const LINKEDIN_ICON =
-  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1752588293/craiyon_160445_image_kvyrui.png";
+  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1752588293/craiyon_160445_image_kvyrui.webp";
 
 const InfoScreen = () => (
   <div className="fixed inset-0 min-h-screen w-screen flex flex-col items-center justify-center bg-black z-50 transition-all">
@@ -122,7 +122,7 @@ const InfoScreen = () => (
       {/* Amanda */}
       <div className="relative w-48 h-[390px] flex flex-col items-center">
         <img
-          src="https://res.cloudinary.com/ddloaxsnx/image/upload/v1752586012/craiyon_152635_image_iv6f62.png"
+          src="https://res.cloudinary.com/ddloaxsnx/image/upload/v1752586012/craiyon_152635_image_iv6f62.webp"
           alt="Amanda"
           className="w-full h-full object-contain"
           style={{ maxHeight: 275 }}
@@ -153,7 +153,7 @@ const InfoScreen = () => (
       {/* Parween */}
       <div className="relative w-48 h-[390px] flex flex-col items-center">
         <img
-          src="https://res.cloudinary.com/ddloaxsnx/image/upload/v1752584943/craiyon_145800_image_wioh4t.png"
+          src="https://res.cloudinary.com/ddloaxsnx/image/upload/v1752584943/craiyon_145800_image_wioh4t.webp"
           alt="Parween"
           className="w-full h-full object-contain"
           style={{ maxHeight: 280 }}
@@ -186,7 +186,7 @@ const InfoScreen = () => (
       Copyright © 2025 Hogwarts and the Hat - H.A.T.
       <br />
       <span className="text-base opacity-70">
-     Amanda Mourao &middot; Parween Ahmad
+        Amanda Mourao &middot; Parween Ahmad
       </span>
     </p>
   </div>

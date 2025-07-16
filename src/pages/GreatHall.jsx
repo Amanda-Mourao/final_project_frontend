@@ -4,7 +4,7 @@ import { PageTransition } from "../components/PageTransition";
 
 // Bilder als Variabeln
 const GREAT_HALL_BG =
-  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751382414/Hogwards-Greathall_kjio3v.png";
+  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751382414/Hogwards-Greathall_kjio3v.webp";
 
 const HAT_GIF =
   "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751295551/GIF-2025-06-30-12-23-34-unscreen_ysixss.gif";

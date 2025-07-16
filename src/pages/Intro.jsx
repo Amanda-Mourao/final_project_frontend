@@ -17,7 +17,7 @@ const Intro = ({ onAuth }) => {
     <div className="relative w-full h-screen overflow-hidden">
       {/* HG_bild */}
       <img
-        src="https://res.cloudinary.com/ddloaxsnx/image/upload/v1751564747/ChatGPT_Image_3._Juli_2025_19_45_28_mj5ftk.png"
+        src="https://res.cloudinary.com/ddloaxsnx/image/upload/v1751564747/ChatGPT_Image_3._Juli_2025_19_45_28_mj5ftk.webp"
         alt="Hintergrund-Bild"
         className="w-full h-full object-fill filter brightness-70 saturate-120 hue-rotate-[-10deg]"
       />

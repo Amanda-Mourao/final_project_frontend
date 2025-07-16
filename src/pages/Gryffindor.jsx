@@ -13,23 +13,23 @@ const ARROW_IMG =
   "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751037480/arrow_ygrkzv.webp";
 
 const GRYFFINDOR_ROOM =
-  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751385661/Gryffindor-Haus_jza0mf.png";
+  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751385661/Gryffindor-Haus_jza0mf.webp";
 
 const STAIRS_PARTS = [
-  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751459137/ende_treppen_1_inrlsz.png",
-  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751459149/mitte_links_treppe_1_jxuorj.png",
-  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751459213/mitte_rechts_treppe_1_sj14dy.png",
-  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751459191/start_treppen_2_unf6l5.png",
+  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751459137/ende_treppen_1_inrlsz.webp",
+  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751459149/mitte_links_treppe_1_jxuorj.webp",
+  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751459213/mitte_rechts_treppe_1_sj14dy.webp",
+  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751459191/start_treppen_2_unf6l5.webp",
 ];
 
 const STAIRS_WHOLE =
-  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751455883/craiyon_133114_image_zkh5jc.png";
+  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751455883/craiyon_133114_image_zkh5jc.webp";
 
 const ARTEFACT_PNG =
-  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1752156220/craiyon_160333_image_vkk0hm.png";
+  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1752156220/craiyon_160333_image_vkk0hm.webp";
 
 const Award_PNG =
-  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1752227885/craiyon_115759_image_anyrf2.png";
+  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1752227885/craiyon_115759_image_anyrf2.webp";
 
 const ARROWS = [
   { dir: "up", tw: "rotate-0" },

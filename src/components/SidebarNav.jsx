@@ -3,10 +3,10 @@ import { logout } from "../utils/api";
 import { NavLink, useNavigate } from "react-router-dom";
 
 const logoutImgUrl =
-  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1752141127/ChatGPT_Image_10._Juli_2025_11_51_44_vzlvyh.png";
+  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1752141127/ChatGPT_Image_10._Juli_2025_11_51_44_vzlvyh.webp";
 
 const MapImgUrl =
-  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1752141750/craiyon_120224_image_yrbhtd.png";
+  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1752141750/craiyon_120224_image_yrbhtd.webp";
 
 const navItems = [
   {

@@ -11,31 +11,31 @@ import { useNavigate } from "react-router-dom";
 const PLANTS = [
   {
     name: "Mimbulus Mimbletonia",
-    img: "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751809484/Pflanze-2_un4mbe.png",
+    img: "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751809484/Pflanze-2_un4mbe.webp",
     needs: ["water", "fertilizer", "weed"],
     lifeDrain: 0.4,
   },
   {
     name: "Devil's Snare",
-    img: "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751809483/Pflanze-4_wt0osl.png",
+    img: "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751809483/Pflanze-4_wt0osl.webp",
     needs: ["pest", "water", "fertilizer"],
     lifeDrain: 0.5,
   },
   {
     name: "Wolfsbane",
-    img: "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751809483/Pflanze-3_avlcyv.png",
+    img: "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751809483/Pflanze-3_avlcyv.webp",
     needs: ["weed", "fertilizer", "pest"],
     lifeDrain: 0.5,
   },
   {
     name: "Snargaluff",
-    img: "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751809487/Pflanze-1_laatdy.png",
+    img: "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751809487/Pflanze-1_laatdy.webp",
     needs: ["pest", "weed", "water"],
     lifeDrain: 0.4,
   },
   {
     name: "Venomous Tentacula",
-    img: "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751893946/ChatGPT_Image_7._Juli_2025_15_12_18_hmoews.png",
+    img: "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751893946/ChatGPT_Image_7._Juli_2025_15_12_18_hmoews.webp",
     needs: ["fertilizer", "pest", "water"],
     lifeDrain: 0.6,
   },
@@ -45,43 +45,43 @@ const TOOLS = [
   {
     key: "water",
     name: "Watering Can",
-    img: "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751814393/Neues_Projekt_8_c0qnjz.png",
+    img: "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751814393/Neues_Projekt_8_c0qnjz.webp",
   },
   {
     key: "weed",
     name: "Weeding Tool",
-    img: "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751814393/Neues_Projekt_10_zqfpqq.png",
+    img: "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751814393/Neues_Projekt_10_zqfpqq.webp",
   },
   {
     key: "pest",
     name: "Pest Spray",
-    img: "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751814393/Neues_Projekt_11_yt5mkv.png",
+    img: "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751814393/Neues_Projekt_11_yt5mkv.webp",
   },
   {
     key: "fertilizer",
     name: "Fertilizer",
-    img: "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751814393/Neues_Projekt_9_quu4ca.png",
+    img: "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751814393/Neues_Projekt_9_quu4ca.webp",
   },
 ];
 
 const BACKGROUND_IMG =
-  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751565332/Huffelpuf-haus_cse36l.png";
+  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751565332/Huffelpuf-haus_cse36l.webp";
 
 const ROUNDS = 3;
 
 const PLANT_LIFE_START = 100;
 
 const PLANTS_SUCCESS_IMG =
-  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751896637/Pflanze-1_laatdy_2_ru5mjz.png";
+  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751896637/Pflanze-1_laatdy_2_ru5mjz.webp";
 
 const PLANTS_FAIL_IMG =
-  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751896768/ChatGPT_Image_7._Juli_2025_15_59_12_rynzma.png";
+  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751896768/ChatGPT_Image_7._Juli_2025_15_59_12_rynzma.webp";
 
 const Award_PNG =
-  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1752227885/craiyon_115759_image_anyrf2.png";
+  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1752227885/craiyon_115759_image_anyrf2.webp";
 
 const ARTEFACT_PNG =
-  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1752156480/craiyon_160752_image_r9xahv.png";
+  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1752156480/craiyon_160752_image_r9xahv.webp";
 
 const FLOW = [
   "plants1",

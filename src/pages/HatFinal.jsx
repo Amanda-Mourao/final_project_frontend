@@ -4,7 +4,7 @@ import { getMe, getUserProgress, updateUserProgress } from "../utils/api";
 
 // Bilder als Variabeln
 const Hatfinal_BG =
-  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751382414/Hogwards-Greathall_kjio3v.png";
+  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751382414/Hogwards-Greathall_kjio3v.webp";
 const HAT_GIF =
   "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751295551/GIF-2025-06-30-12-23-34-unscreen_ysixss.gif";
 
@@ -22,13 +22,13 @@ const HOUSE_AUDIOS = {
 // Wappen als Variabeln
 const HOUSE_WAPPEN = {
   Gryffindor:
-    "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751878917/ChatGPT_Image_7._Juli_2025_10_55_51_1_rfptfw.png",
+    "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751878917/ChatGPT_Image_7._Juli_2025_10_55_51_1_rfptfw.webp",
   Slytherin:
-    "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751878905/ChatGPT_Image_7._Juli_2025_10_55_51_4_ddz8oh.png",
+    "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751878905/ChatGPT_Image_7._Juli_2025_10_55_51_4_ddz8oh.webp",
   Hufflepuff:
-    "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751878911/ChatGPT_Image_7._Juli_2025_10_55_51_2_y32nm4.png",
+    "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751878911/ChatGPT_Image_7._Juli_2025_10_55_51_2_y32nm4.webp",
   Ravenclaw:
-    "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751878909/ChatGPT_Image_7._Juli_2025_10_55_51_3_dzojes.png",
+    "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751878909/ChatGPT_Image_7._Juli_2025_10_55_51_3_dzojes.webp",
 };
 
 const WAPPEN_LIST = Object.keys(HOUSE_WAPPEN);

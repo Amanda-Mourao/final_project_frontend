@@ -1,10 +1,10 @@
 import { useAudio } from "./AudioContext";
 
 const ICON_MUTE =
-  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1752142089/ChatGPT_Image_10._Juli_2025_12_08_03_gj8pcp.png";
+  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1752142089/ChatGPT_Image_10._Juli_2025_12_08_03_gj8pcp.webp";
 
 const ICON_UNMUTE =
-  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1752141901/craiyon_120440_image_uwukl8.png";
+  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1752141901/craiyon_120440_image_uwukl8.webp";
 
 const AudioToggle = ({ size = 28 }) => {
   const { muted, setMuted } = useAudio();

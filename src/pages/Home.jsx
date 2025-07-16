@@ -4,10 +4,10 @@ import { PageTransition } from "../components/PageTransition";
 
 // Bilder Links als Variabeln:
 const startscreen =
-  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751564575/ChatGPT_Image_3._Juli_2025_19_38_21_ghelar.png";
+  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751564575/ChatGPT_Image_3._Juli_2025_19_38_21_ghelar.webp";
 
 const logo =
-  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751013110/ChatGPT_Image_26._Juni_2025_18_46_13-Photoroom_laujaa.png";
+  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751013110/ChatGPT_Image_26._Juni_2025_18_46_13-Photoroom_laujaa.webp";
 
 // Fade Effekt für den Anfang
 const DURATION_BEFORE_FADE = 5500;

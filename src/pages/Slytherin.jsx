@@ -14,36 +14,36 @@ const INGREDIENTS = [
   {
     name: "DRAGON BLOOD",
     closed:
-      "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751396541/Potion-rot-mit_rwfkco.png",
-    open: "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751396541/Potion-rot-ohne_rbbtfq.png",
+      "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751396541/Potion-rot-mit_rwfkco.webp",
+    open: "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751396541/Potion-rot-ohne_rbbtfq.webp",
     hint: "GIVES THE POTION STRENGTH.",
   },
   {
     name: "VEIL HERB",
     closed:
-      "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751396541/Potion-green-mit_jvp9zs.png",
-    open: "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751396541/Potion-green-ohne_pl1bdk.png",
+      "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751396541/Potion-green-mit_jvp9zs.webp",
+    open: "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751396541/Potion-green-ohne_pl1bdk.webp",
     hint: "ADDS WIT TO THE POTION.",
   },
   {
     name: "MOONSTONE",
     closed:
-      "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751396541/Potion-blue-mit_q3kedm.png",
-    open: "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751396541/Potion-blue-ohne_ujfrwq.png",
+      "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751396541/Potion-blue-mit_q3kedm.webp",
+    open: "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751396541/Potion-blue-ohne_ujfrwq.webp",
     hint: "BRINGS CLARITY AND CALM.",
   },
   {
     name: "BASILISK SCALE",
     closed:
-      "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751396542/Potion-lila-mit_vi3dxs.png",
-    open: "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751396541/Potion-lila-ohne_sifqxi.png",
+      "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751396542/Potion-lila-mit_vi3dxs.webp",
+    open: "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751396541/Potion-lila-ohne_sifqxi.webp",
     hint: "GIVES THE POTION ASSERTIVENESS.",
   },
   {
     name: "MANDRAKE ROOT",
     closed:
-      "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751446137/Potion-gelb-mit_abn8s1.png",
-    open: "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751446137/Potion-gelb-ohne_ii1dts.png",
+      "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751446137/Potion-gelb-mit_abn8s1.webp",
+    open: "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751446137/Potion-gelb-ohne_ii1dts.webp",
     hint: "BRINGS HIDDEN THOUGHTS TO LIFE.",
   },
 ];
@@ -76,21 +76,21 @@ const MISSION_NAMES = [
 ];
 
 const ARTEFACT_PNG =
-  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1752156792/craiyon_161305_image_g9r7fg.png";
+  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1752156792/craiyon_161305_image_g9r7fg.webp";
 
 const Award_PNG =
-  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1752227885/craiyon_115759_image_anyrf2.png";
+  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1752227885/craiyon_115759_image_anyrf2.webp";
 
 // --- FEEDBACK-Screen ---
 const FeedbackScreen = ({ correct, onContinue }) => {
   const CAULDRON_IMG =
-    "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751451728/craiyon_122152_image_wcedsd.png";
+    "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751451728/craiyon_122152_image_wcedsd.webp";
 
   const SMOKE_IMAGES = [
-    "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751451373/Rauch-Blau_wvcyh9.png",
-    "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751451373/Rauch-gr%C3%BCn_euqba6.png",
-    "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751451373/Rauch-lila_lew0yx.png",
-    "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751451373/Rauch-rot_bcorzg.png",
+    "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751451373/Rauch-Blau_wvcyh9.webp",
+    "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751451373/Rauch-gr%C3%BCn_euqba6.webp",
+    "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751451373/Rauch-lila_lew0yx.webp",
+    "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751451373/Rauch-rot_bcorzg.webp",
   ];
 
   return (
@@ -315,7 +315,7 @@ export const Slytherin = () => {
   return (
     <div>
       <PageTransition />
-      <div className="min-h-screen flex flex-col items-center justify-center bg-cover bg-center bg-[url('https://res.cloudinary.com/ddloaxsnx/image/upload/v1751389728/Slytherin-Haus_zwvojj.png')]">
+      <div className="min-h-screen flex flex-col items-center justify-center bg-cover bg-center bg-[url('https://res.cloudinary.com/ddloaxsnx/image/upload/v1751389728/Slytherin-Haus_zwvojj.webp')]">
         {/* --- Missionen --- */}
         {step === "mission" && missionStep < 3 ? (
           <AllGamesSlytherin

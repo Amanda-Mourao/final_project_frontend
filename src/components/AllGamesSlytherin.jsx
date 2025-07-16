@@ -8,10 +8,10 @@ const SNAKE_VIDEO =
   "https://res.cloudinary.com/ddloaxsnx/video/upload/v1751644711/0704_2_ntbapx.mp4";
 
 const FROGBOY_IMG =
-  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751477347/craiyon_192849_image_m8tge2.png";
+  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751477347/craiyon_192849_image_m8tge2.webp";
 
 const HUMAN_IMG =
-  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751474521/mensch_tjxqck.png";
+  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751474521/mensch_tjxqck.webp";
 
 /// Typing Texte
 const FIRE_TYPING_TEXT =

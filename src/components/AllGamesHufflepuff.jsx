@@ -11,7 +11,7 @@ const GAME_TIME = 9;
 const PLANT_IMG =
   "https://raw.githubusercontent.com/klarsongs/cave/master/no_hands.svg?sanitize=true";
 const PLANT_IN_POT_IMG =
-  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751892377/Screenshot_2025-07-07_144531_sad4ee.png";
+  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751892377/Screenshot_2025-07-07_144531_sad4ee.webp";
 const POT_IMG =
   "https://raw.githubusercontent.com/klarsongs/cave/master/pot.svg?sanitize=true";
 const SCREAM_SOUND =
@@ -19,15 +19,15 @@ const SCREAM_SOUND =
 
 // Puffskein Images
 const PUFF_IMG_SICK =
-  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751657959/Puffskein-krank_ohrpnw.png";
+  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751657959/Puffskein-krank_ohrpnw.webp";
 const PUFF_IMG_HEALTHY =
-  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751655175/Puffskein_jqsate.png";
+  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751655175/Puffskein_jqsate.webp";
 
 // Badger Mission
 const BADGER_IMG =
-  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751881312/craiyon_114144_image_dxx6er.png";
+  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751881312/craiyon_114144_image_dxx6er.webp";
 const TREE_IMG =
-  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751566924/Baum_rdyohr.png";
+  "https://res.cloudinary.com/ddloaxsnx/image/upload/v1751566924/Baum_rdyohr.webp";
 
 const randomPosWithinBounds = (width, height, margin = 80) => {
   const x = Math.floor(Math.random() * (width - margin * 2)) + margin;
