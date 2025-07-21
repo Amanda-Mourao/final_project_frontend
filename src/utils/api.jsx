@@ -2,7 +2,7 @@ import axios from "axios";
 
 const API_URL =
   import.meta.env.VITE_API_URL ||
-  "https://final-project-backend-3lca.onrender.com";
+  "https://hogwarts-and-the-hat-backend-9kr3.onrender.com";
 
 // Zentrale Axios
 const api = axios.create({
